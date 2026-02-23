@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Troubleshooting Guide | Zitiantao Lin
+    
+  
+</title>
+<meta name="author" content="Zitiantao Lin">
+<meta name="description" content="Graduate Research Assistant at CRAFT Lab, Northeastern University. First author of 'RaycastGrasp', awarded Best Paper at ICIR 2025.
+">
+
+  <meta name="keywords" content="Robotics, Computer Vision, Machine Learning, HCI, Northeastern University">
+
+
+
+
+
+
+
+
+
+
+<!-- Security: Content Security Policy -->
+<!-- Permissive CSP suitable for academic websites. Allows external images, videos, and common embed services. -->
+<!-- To customize for your needs, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"
+>
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Code Syntax Highlighting -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-github.css"
+  media=""
+  id="highlight_theme_light"
+>
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://zitiantaolin.github.io/TROUBLESHOOTING/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js"></script>
+  <link
+    defer
+    rel="stylesheet"
+    href="/assets/css/jekyll-pygments-themes-native.css"
+    media="none"
+    id="highlight_theme_dark"
+  >
+  <script>
+    initTheme();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Zitiantao Lin
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Troubleshooting Guide</h1>
+    
+  </header>
+
+  <article>
+    <h1 id="troubleshooting-guide">Troubleshooting Guide</h1>
+
+<p>This guide covers common issues and their solutions. For more information, see <a href="/FAQ/">FAQ.md</a> or check <a href="https://github.com/alshedivat/al-folio/discussions">GitHub Discussions</a>.</p>
+
+<!--ts-->
+
+<ul>
+  <li><a href="#troubleshooting-guide">Troubleshooting Guide</a>
+    <ul>
+      <li><a href="#deployment-issues">Deployment Issues</a>
+        <ul>
+          <li><a href="#site-fails-to-deploy-on-github-pages">Site fails to deploy on GitHub Pages</a></li>
+          <li><a href="#custom-domain-becomes-blank-after-deployment">Custom domain becomes blank after deployment</a></li>
+          <li><a href="#github-actions-unknown-tag-toc-error">GitHub Actions: “Unknown tag ‘toc’” error</a></li>
+        </ul>
+      </li>
+      <li><a href="#local-build-issues">Local Build Issues</a>
+        <ul>
+          <li><a href="#docker-build-fails">Docker build fails</a></li>
+          <li><a href="#ruby-dependency-issues">Ruby dependency issues</a></li>
+          <li><a href="#port-already-in-use">Port already in use</a></li>
+        </ul>
+      </li>
+      <li><a href="#styling--layout-problems">Styling &amp; Layout Problems</a>
+        <ul>
+          <li><a href="#css-and-js-not-loading-properly">CSS and JS not loading properly</a></li>
+          <li><a href="#site-looks-broken-after-deployment">Site looks broken after deployment</a></li>
+          <li><a href="#theme-colors-not-applying">Theme colors not applying</a></li>
+        </ul>
+      </li>
+      <li><a href="#content-not-appearing">Content Not Appearing</a>
+        <ul>
+          <li><a href="#blog-posts-not-showing-up">Blog posts not showing up</a></li>
+          <li><a href="#publications-not-displaying">Publications not displaying</a></li>
+          <li><a href="#images-not-loading">Images not loading</a></li>
+        </ul>
+      </li>
+      <li><a href="#configuration-issues">Configuration Issues</a>
+        <ul>
+          <li><a href="#yaml-syntax-errors">YAML syntax errors</a></li>
+          <li><a href="#feed-rssatom-not-working">Feed (RSS/Atom) not working</a></li>
+          <li><a href="#search-not-working">Search not working</a></li>
+        </ul>
+      </li>
+      <li><a href="#feature-specific-issues">Feature-Specific Issues</a>
+        <ul>
+          <li><a href="#comments-giscus-not-appearing">Comments (Giscus) not appearing</a></li>
+          <li><a href="#related-posts-broken">Related posts broken</a></li>
+          <li><a href="#code-formatting-issues">Code formatting issues</a></li>
+        </ul>
+      </li>
+      <li><a href="#getting-help">Getting Help</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!--te-->
+
+<h2 id="deployment-issues">Deployment Issues</h2>
+
+<h3 id="site-fails-to-deploy-on-github-pages">Site fails to deploy on GitHub Pages</h3>
+
+<p><strong>Problem:</strong> GitHub Actions shows an error when deploying.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Check your repository <strong>Actions</strong> tab for error messages</li>
+  <li>Ensure you followed <a href="/QUICKSTART/#step-2-configure-deployment-1-min">Step 2 of QUICKSTART.md</a> (Workflow permissions)</li>
+  <li>Verify your <code class="language-plaintext highlighter-rouge">_config.yml</code> has correct <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">baseurl</code>:
+    <ul>
+      <li>Personal site: <code class="language-plaintext highlighter-rouge">url: https://username.github.io</code> and <code class="language-plaintext highlighter-rouge">baseurl:</code> (empty)</li>
+      <li>Project site: <code class="language-plaintext highlighter-rouge">url: https://username.github.io</code> and <code class="language-plaintext highlighter-rouge">baseurl: /repo-name/</code></li>
+    </ul>
+  </li>
+  <li>Check that you’re pushing to the <code class="language-plaintext highlighter-rouge">main</code> (or <code class="language-plaintext highlighter-rouge">master</code>) branch, NOT <code class="language-plaintext highlighter-rouge">gh-pages</code></li>
+  <li>Commit and push a small change to trigger redeployment</li>
+</ol>
+
+<p><strong>For YAML syntax errors:</strong></p>
+
+<ul>
+  <li>Run <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> locally to see the exact error</li>
+  <li>Check for unquoted special characters (<code class="language-plaintext highlighter-rouge">:</code>, <code class="language-plaintext highlighter-rouge">&amp;</code>, <code class="language-plaintext highlighter-rouge">#</code>) in YAML strings</li>
+</ul>
+
+<hr />
+
+<h3 id="custom-domain-becomes-blank-after-deployment">Custom domain becomes blank after deployment</h3>
+
+<p><strong>Problem:</strong> You set a custom domain (e.g., <code class="language-plaintext highlighter-rouge">example.com</code>), but it resets to blank after deployment.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Create a file named <code class="language-plaintext highlighter-rouge">CNAME</code> (no extension) in your repository root</li>
+  <li>Add your domain to it: <code class="language-plaintext highlighter-rouge">example.com</code> (one domain per line)</li>
+  <li>Commit and push</li>
+  <li>The domain will persist after future deployments</li>
+</ol>
+
+<p>(See <a href="/INSTALL/#deployment">DNS configuration instructions in INSTALL.md</a> for initial custom domain setup.)</p>
+
+<hr />
+
+<h3 id="github-actions-unknown-tag-toc-error">GitHub Actions: “Unknown tag ‘toc’” error</h3>
+
+<p><strong>Problem:</strong> Local build works, but GitHub Actions fails with <code class="language-plaintext highlighter-rouge">Unknown tag 'toc'</code>.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Check your <strong>Settings</strong> → <strong>Pages</strong> → <strong>Source</strong> is set to <code class="language-plaintext highlighter-rouge">Deploy from a branch</code></li>
+  <li>Ensure the branch is set to <code class="language-plaintext highlighter-rouge">gh-pages</code> (NOT <code class="language-plaintext highlighter-rouge">main</code>)</li>
+  <li>Wait 5 minutes and check Actions again</li>
+  <li>The issue usually resolves after you verify the gh-pages branch is set</li>
+</ol>
+
+<hr />
+
+<h2 id="local-build-issues">Local Build Issues</h2>
+
+<h3 id="docker-build-fails">Docker build fails</h3>
+
+<p><strong>Problem:</strong> <code class="language-plaintext highlighter-rouge">docker compose up</code> fails or shows errors.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Update Docker: <code class="language-plaintext highlighter-rouge">docker compose pull</code></li>
+  <li>Rebuild: <code class="language-plaintext highlighter-rouge">docker compose up --build</code></li>
+  <li>If still failing, check your system resources (disk space, RAM)</li>
+  <li>For M1/M2 Mac users, verify you’re using a compatible Docker version</li>
+  <li>Check Docker Desktop is running</li>
+</ol>
+
+<p><strong>For permission issues:</strong></p>
+
+<ul>
+  <li>Linux users may need to add your user to the docker group: <code class="language-plaintext highlighter-rouge">sudo usermod -aG docker $USER</code></li>
+  <li>Then log out and log back in</li>
+</ul>
+
+<hr />
+
+<h3 id="ruby-dependency-issues">Ruby dependency issues</h3>
+
+<p><strong>Problem:</strong> <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> conflicts or bundle errors.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Delete <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>: <code class="language-plaintext highlighter-rouge">rm Gemfile.lock</code></li>
+  <li>Update Bundler: <code class="language-plaintext highlighter-rouge">bundle update</code></li>
+  <li>Install gems: <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  <li>Try serving again: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+</ol>
+
+<hr />
+
+<h3 id="port-already-in-use">Port already in use</h3>
+
+<p><strong>Problem:</strong> “Address already in use” when running <code class="language-plaintext highlighter-rouge">jekyll serve</code>.</p>
+
+<p><strong>Solution - Docker:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose down  <span class="c"># Stop the running container</span>
+docker compose up    <span class="c"># Start fresh</span>
+</code></pre></div></div>
+
+<p><strong>Solution - Local Ruby:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Find and kill the Jekyll process</span>
+lsof <span class="nt">-i</span> :4000 | <span class="nb">grep </span>LISTEN | <span class="nb">awk</span> <span class="s1">'{print $2}'</span> | xargs <span class="nb">kill</span>
+
+<span class="c"># Or specify a different port</span>
+bundle <span class="nb">exec </span>jekyll serve <span class="nt">--port</span> 5000
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="styling--layout-problems">Styling &amp; Layout Problems</h2>
+
+<h3 id="css-and-js-not-loading-properly">CSS and JS not loading properly</h3>
+
+<p><strong>Problem:</strong> Site looks broken: no colors, fonts wrong, links don’t work.</p>
+
+<p><strong>Common cause:</strong> Incorrect <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">baseurl</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>
+    <p><strong>Personal/organization site:</strong></p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">url</span><span class="pi">:</span> <span class="s">https://username.github.io</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="c1"># MUST be empty (not deleted)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Project site:</strong></p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">url</span><span class="pi">:</span> <span class="s">https://username.github.io</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s">/repository-name/</span> <span class="c1"># Must match your repo name</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Clear browser cache:</strong>
+    <ul>
+      <li>Chrome: <code class="language-plaintext highlighter-rouge">Ctrl+Shift+R</code> (Windows/Linux) or <code class="language-plaintext highlighter-rouge">Cmd+Shift+R</code> (Mac)</li>
+      <li>Firefox: <code class="language-plaintext highlighter-rouge">Ctrl+F5</code> (Windows/Linux) or <code class="language-plaintext highlighter-rouge">Cmd+R</code> (Mac)</li>
+      <li>Or open a private/incognito window</li>
+    </ul>
+  </li>
+  <li>Redeploy: Make a small change and push to trigger GitHub Actions again</li>
+</ol>
+
+<hr />
+
+<h3 id="site-looks-broken-after-deployment">Site looks broken after deployment</h3>
+
+<p><strong>Checklist:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Is <code class="language-plaintext highlighter-rouge">baseurl</code> correct (and not accidentally deleted)?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Did you clear your browser cache?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Wait 5 minutes for GitHub Pages to update</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check GitHub Actions completed successfully</li>
+</ul>
+
+<hr />
+
+<h3 id="theme-colors-not-applying">Theme colors not applying</h3>
+
+<p><strong>Problem:</strong> You changed <code class="language-plaintext highlighter-rouge">_config.yml</code> color settings but nothing changed.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Check your color name is valid in <code class="language-plaintext highlighter-rouge">_sass/_variables.scss</code></li>
+  <li>Clear browser cache (see above)</li>
+  <li>Rebuild: <code class="language-plaintext highlighter-rouge">docker compose up --build</code> (Docker) or <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> (Ruby)</li>
+  <li>Wait for GitHub Actions to complete</li>
+  <li>Visit the site in a private/incognito window</li>
+</ol>
+
+<hr />
+
+<h2 id="content-not-appearing">Content Not Appearing</h2>
+
+<h3 id="blog-posts-not-showing-up">Blog posts not showing up</h3>
+
+<p><strong>Problem:</strong> Created a post in <code class="language-plaintext highlighter-rouge">_posts/</code> but it’s not on the blog page.</p>
+
+<p><strong>Checklist:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Filename format is correct: <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code> (e.g., <code class="language-plaintext highlighter-rouge">2024-01-15-my-post.md</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />File is in the <code class="language-plaintext highlighter-rouge">_posts/</code> directory (not in a subdirectory)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Post has required frontmatter:
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Post Title</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2024-01-15</span>
+<span class="nn">---</span>
+</code></pre></div>    </div>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Post date is NOT in the future (Jekyll doesn’t publish future-dated posts by default)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Blog posts are enabled in <code class="language-plaintext highlighter-rouge">_config.yml</code>: <code class="language-plaintext highlighter-rouge">blog_page: true</code></li>
+</ul>
+
+<p><strong>To fix:</strong></p>
+
+<ol>
+  <li>Check the filename format (uppercase, dashes, no spaces)</li>
+  <li>Verify the date is today or in the past</li>
+  <li>Rebuild: <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> and check for error messages</li>
+</ol>
+
+<hr />
+
+<h3 id="publications-not-displaying">Publications not displaying</h3>
+
+<p><strong>Problem:</strong> You added a BibTeX entry to <code class="language-plaintext highlighter-rouge">papers.bib</code> but it’s not showing on the publications page.</p>
+
+<p><strong>Checklist:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />File is at <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />BibTeX syntax is correct (check for missing commas, unmatched braces)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Entry has a unique citation key: <code class="language-plaintext highlighter-rouge">@article{einstein1905, ...}</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Publication page is enabled: Check <code class="language-plaintext highlighter-rouge">publications_page: true</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+</ul>
+
+<p><strong>To debug BibTeX errors:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Local Ruby setup</span>
+bundle <span class="nb">exec </span>jekyll build 2&gt;&amp;1 | <span class="nb">grep</span> <span class="nt">-i</span> bibtex
+
+<span class="c"># Docker</span>
+docker compose run <span class="nt">--rm</span> web jekyll build 2&gt;&amp;1 | <span class="nb">grep</span> <span class="nt">-i</span> bibtex
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="images-not-loading">Images not loading</h3>
+
+<p><strong>Problem:</strong> Image paths broken or showing as missing.</p>
+
+<p><strong>Common causes:</strong></p>
+
+<ul>
+  <li>Wrong path in Markdown (use relative paths)</li>
+  <li>Image file doesn’t exist at the specified location</li>
+  <li>Case sensitivity (Linux/Mac are case-sensitive)</li>
+</ul>
+
+<p><strong>Solutions:</strong></p>
+
+<ol>
+  <li>
+    <p><strong>Correct path format:</strong></p>
+
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">assets/img/image-name.jpg</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Check the file exists:</strong>
+    <ul>
+      <li>Personal images: <code class="language-plaintext highlighter-rouge">assets/img/</code></li>
+      <li>Paper PDFs: <code class="language-plaintext highlighter-rouge">assets/pdf/</code></li>
+      <li>Use lowercase filenames, no spaces</li>
+    </ul>
+  </li>
+  <li><strong>For BibTeX PDF links:</strong>
+    <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@article</span><span class="p">{</span><span class="nl">mykey</span><span class="p">,</span>
+  <span class="na">pdf</span><span class="p">=</span><span class="s">{my-paper.pdf}</span><span class="p">,</span>  <span class="err">%</span> <span class="err">File</span> <span class="err">should</span> <span class="err">be</span> <span class="err">at</span> <span class="err">assets/pdf/my-paper.pdf</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="configuration-issues">Configuration Issues</h2>
+
+<h3 id="yaml-syntax-errors">YAML syntax errors</h3>
+
+<p><strong>Problem:</strong> GitHub Actions fails with YAML error, or build is silent.</p>
+
+<p><strong>Common mistakes:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ❌ Wrong: Unquoted colons or ampersands</span>
+<span class="na">title</span><span class="pi">:</span> <span class="na">My Site</span><span class="pi">:</span> <span class="s">Research &amp; Teaching</span>
+
+<span class="c1"># ✅ Correct: Quote special characters</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">My</span><span class="nv"> </span><span class="s">Site:</span><span class="nv"> </span><span class="s">Research</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Teaching"</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ❌ Wrong: Inconsistent indentation</span>
+<span class="na">nav</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Home</span>
+  <span class="na">url</span><span class="pi">:</span> <span class="s">/</span>
+ <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">About</span>  <span class="c1"># Extra space!</span>
+ <span class="err"> </span><span class="na">url</span><span class="pi">:</span> <span class="s">/about/</span>
+
+<span class="c1"># ✅ Correct: Consistent 2-space indentation</span>
+<span class="na">nav</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Home</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">About</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/about/</span>
+</code></pre></div></div>
+
+<p><strong>To find errors:</strong></p>
+
+<ol>
+  <li>Use a YAML validator: <a href="https://www.yamllint.com/">yamllint.com</a></li>
+  <li>Run locally: <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code> shows the exact error line</li>
+  <li>Check that you didn’t delete required lines (like <code class="language-plaintext highlighter-rouge">baseurl:</code>)</li>
+</ol>
+
+<hr />
+
+<h3 id="feed-rssatom-not-working">Feed (RSS/Atom) not working</h3>
+
+<p><strong>Problem:</strong> RSS feed at <code class="language-plaintext highlighter-rouge">/feed.xml</code> is empty or broken.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Verify required <code class="language-plaintext highlighter-rouge">_config.yml</code> fields:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Your Site Title</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Brief description</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s">https://your-domain.com</span> <span class="c1"># MUST be absolute URL</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Ensure <code class="language-plaintext highlighter-rouge">baseurl</code> is correct</li>
+  <li>Check at least one blog post exists (with correct date)</li>
+  <li>Rebuild and wait for GitHub Actions to complete</li>
+</ol>
+
+<hr />
+
+<h3 id="search-not-working">Search not working</h3>
+
+<p><strong>Problem:</strong> Search box is empty or always returns nothing.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Ensure search is enabled in <code class="language-plaintext highlighter-rouge">_config.yml</code>:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">search_enabled</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Check that <code class="language-plaintext highlighter-rouge">_config.yml</code> has a valid <code class="language-plaintext highlighter-rouge">url</code> (required for search)</li>
+  <li>Rebuild the site</li>
+  <li>Search index is generated during build; give it a minute after push</li>
+</ol>
+
+<hr />
+
+<h2 id="feature-specific-issues">Feature-Specific Issues</h2>
+
+<h3 id="comments-giscus-not-appearing">Comments (Giscus) not appearing</h3>
+
+<p><strong>Problem:</strong> You enabled Giscus in <code class="language-plaintext highlighter-rouge">_config.yml</code> but comments don’t show.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Verify you have a GitHub repository for discussions (usually your main repo)</li>
+  <li>Check <code class="language-plaintext highlighter-rouge">_config.yml</code> has correct settings:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">disqus_shortname</span><span class="pi">:</span> <span class="no">false</span> <span class="c1"># Make sure this is false</span>
+<span class="na">giscus</span><span class="pi">:</span>
+  <span class="na">repo</span><span class="pi">:</span> <span class="s">username/repo-name</span>
+  <span class="na">repo_id</span><span class="pi">:</span> <span class="s">YOUR_REPO_ID</span>
+  <span class="na">category_id</span><span class="pi">:</span> <span class="s">YOUR_CATEGORY_ID</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Visit <a href="https://giscus.app">Giscus.app</a> to get your IDs and verify setup</li>
+  <li>Check the GitHub repo has Discussions enabled (Settings → Features)</li>
+</ol>
+
+<hr />
+
+<h3 id="related-posts-broken">Related posts broken</h3>
+
+<p><strong>Problem:</strong> Related posts feature crashes or shows errors.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>Related posts requires more gems. If you disabled it in <code class="language-plaintext highlighter-rouge">_config.yml</code>, that’s fine:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">related_blog_posts</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre></div>    </div>
+  </li>
+  <li>If you want to enable it, ensure <code class="language-plaintext highlighter-rouge">Gemfile</code> has all dependencies installed:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle <span class="nb">exec </span>jekyll build
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="code-formatting-issues">Code formatting issues</h3>
+
+<p><strong>Problem:</strong> Code blocks don’t have syntax highlighting or look wrong.</p>
+
+<p><strong>Solution:</strong></p>
+
+<ol>
+  <li>
+    <p>Use proper markdown syntax:</p>
+
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">python
+</span><span class="c1"># Your code here
+</span><span class="k">print</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+<span class="p">```</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>For inline code:</p>
+
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Use <span class="sb">`code-here`</span> for inline code.
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Check that your language is supported by Pygments (Python, Ruby, JavaScript, etc. are all supported)</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="getting-help">Getting Help</h2>
+
+<p>If you’re stuck:</p>
+
+<ol>
+  <li><strong>Check existing documentation:</strong>
+    <ul>
+      <li><a href="/QUICKSTART/">QUICKSTART.md</a> – Get started in 5 minutes</li>
+      <li><a href="/INSTALL/">INSTALL.md</a> – Installation and deployment</li>
+      <li><a href="CUSTOMIZE.md">CUSTOMIZE.md</a> – Full customization guide</li>
+      <li><a href="/FAQ/">FAQ.md</a> – Frequently asked questions</li>
+    </ul>
+  </li>
+  <li><strong>Search for your issue:</strong>
+    <ul>
+      <li><a href="https://github.com/alshedivat/al-folio/discussions">GitHub Discussions</a> – Q&amp;A from community</li>
+      <li><a href="https://github.com/alshedivat/al-folio/issues">GitHub Issues</a> – Bug reports and feature requests</li>
+    </ul>
+  </li>
+  <li><strong>Get help from AI:</strong>
+    <ul>
+      <li>Use the <strong>GitHub Copilot Customization Agent</strong> (requires Copilot subscription) to get step-by-step help</li>
+      <li>See <a href="CUSTOMIZE.md#github-copilot-customization-agent">CUSTOMIZE.md § GitHub Copilot Customization Agent</a></li>
+    </ul>
+  </li>
+  <li><strong>Create a new discussion:</strong>
+    <ul>
+      <li><a href="https://github.com/alshedivat/al-folio/discussions/new?category=q-a">Ask a question</a> on GitHub</li>
+      <li>Include error messages and what you’re trying to do</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<p><strong>Most issues are resolved by:</strong></p>
+
+<ol>
+  <li>Checking <code class="language-plaintext highlighter-rouge">url</code> and <code class="language-plaintext highlighter-rouge">baseurl</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>Clearing browser cache</li>
+  <li>Waiting for GitHub Actions to complete (~5 minutes)</li>
+</ol>
+
+  </article>
+
+  <!-- References/bibliography disabled for GitHub Pages compatibility -->
+
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    
+
+    <div class="container">
+      
+  &copy; Copyright 2026
+  Zitiantao
+  
+  Lin. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+  
+  
+    Last updated: February 23, 2026.
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+<!-- Badges -->
+
+
+
+
+  <!-- MathJax -->
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+    integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+    crossorigin="anonymous"
+  ></script>
+  
+    <script src="/assets/js/mathjax-setup.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
+      crossorigin="anonymous"
+    ></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js"></script>
+  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js"></script>
+
+
+
+
+  </body>
+</html>

@@ -16,7 +16,7 @@
   
   
     
-      Announcement_1 | Zitiantao Lin
+      Agent Guidelines for al-folio | Zitiantao Lin
     
   
 </title>
@@ -86,7 +86,7 @@
   >
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="https://zitiantaolin.github.io/news/announcement_1/">
+<link rel="canonical" href="https://zitiantaolin.github.io/AGENTS/">
 
 
   <!-- Dark Mode -->
@@ -217,49 +217,132 @@
       
         
 
-
-
-
-
-
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">Announcement_1</h1>
-
-    <p class="post-meta">
-      Created on October 22, 2015
-      
-
-      
-      
-
-      
-    </p>
-
-    <p class="post-tags">
-      
-        <i class="fa-solid fa-calendar fa-sm"></i> 2015
-      
-
-      
-
-      
-    </p>
+    <h1 class="post-title">Agent Guidelines for al-folio</h1>
+    
   </header>
 
-  <article class="post-content">
-    <!-- TOC disabled for GitHub Pages compatibility -->
-    <div id="markdown-content">
-      <p>A simple inline announcement.</p>
+  <article>
+    <h1 id="agent-guidelines-for-al-folio">Agent Guidelines for al-folio</h1>
 
-    </div>
+<p>A simple, clean, and responsive Jekyll theme for academics.</p>
+
+<h2 id="quick-links-by-role">Quick Links by Role</h2>
+
+<ul>
+  <li><strong>Are you a coding agent?</strong> → Read <a href=".github/copilot-instructions.md"><code class="language-plaintext highlighter-rouge">.github/copilot-instructions.md</code></a> first (tech stack, build, CI/CD, common pitfalls &amp; solutions)</li>
+  <li><strong>Customizing the site?</strong> → See <a href=".github/agents/customize.agent.md"><code class="language-plaintext highlighter-rouge">.github/agents/customize.agent.md</code></a></li>
+  <li><strong>Writing documentation?</strong> → See <a href=".github/agents/docs.agent.md"><code class="language-plaintext highlighter-rouge">.github/agents/docs.agent.md</code></a></li>
+  <li><strong>Need setup/deployment help?</strong> → <a href="/INSTALL/">INSTALL.md</a></li>
+  <li><strong>Troubleshooting &amp; FAQ?</strong> → <a href="/TROUBLESHOOTING/">TROUBLESHOOTING.md</a></li>
+  <li><strong>Customization &amp; theming?</strong> → <a href="CUSTOMIZE.md">CUSTOMIZE.md</a></li>
+  <li><strong>Quick 5-min start?</strong> → <a href="/QUICKSTART/">QUICKSTART.md</a></li>
+</ul>
+
+<h2 id="essential-commands">Essential Commands</h2>
+
+<h3 id="local-development-docker">Local Development (Docker)</h3>
+
+<p>The recommended approach is using Docker.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Initial setup &amp; start dev server</span>
+docker compose pull <span class="o">&amp;&amp;</span> docker compose up
+<span class="c"># Site runs at http://localhost:8080</span>
+
+<span class="c"># Rebuild after changing dependencies or Dockerfile</span>
+docker compose up <span class="nt">--build</span>
+
+<span class="c"># Stop containers and free port 8080</span>
+docker compose down
+</code></pre></div></div>
+
+<h3 id="pre-commit-checklist">Pre-Commit Checklist</h3>
+
+<p>Before every commit, you <strong>must</strong> run these steps:</p>
+
+<ol>
+  <li><strong>Format Code:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># (First time only)</span>
+npm <span class="nb">install</span> <span class="nt">--save-dev</span> prettier @shopify/prettier-plugin-liquid
+<span class="c"># Format all files</span>
+npx prettier <span class="nb">.</span> <span class="nt">--write</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Build Locally &amp; Verify:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Rebuild the site</span>
+docker compose up <span class="nt">--build</span>
+
+<span class="c"># Verify by visiting http://localhost:8080.</span>
+<span class="c"># Check navigation, pages, images, and dark mode.</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="critical-configuration">Critical Configuration</h2>
+
+<p>When modifying <code class="language-plaintext highlighter-rouge">_config.yml</code>, these <strong>must be updated together</strong>:</p>
+
+<ul>
+  <li><strong>Personal site:</strong> <code class="language-plaintext highlighter-rouge">url: https://username.github.io</code> + <code class="language-plaintext highlighter-rouge">baseurl:</code> (empty)</li>
+  <li><strong>Project site:</strong> <code class="language-plaintext highlighter-rouge">url: https://username.github.io</code> + <code class="language-plaintext highlighter-rouge">baseurl: /repo-name/</code></li>
+  <li><strong>YAML errors:</strong> Quote strings with special characters: <code class="language-plaintext highlighter-rouge">title: "My: Cool Site"</code></li>
+</ul>
+
+<h2 id="development-workflow">Development Workflow</h2>
+
+<ul>
+  <li><strong>Git &amp; Commits:</strong> For commit message format and Git practices, see <a href=".github/GIT_WORKFLOW.md">.github/GIT_WORKFLOW.md</a>.</li>
+  <li><strong>Code-Specific Instructions:</strong> Consult the relevant instruction file for your code type.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>File Type</th>
+      <th>Instruction File</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Markdown content (<code class="language-plaintext highlighter-rouge">_posts/</code>, <code class="language-plaintext highlighter-rouge">_pages/</code>, etc.)</td>
+      <td><a href=".github/instructions/markdown-content.instructions.md">markdown-content.instructions.md</a></td>
+    </tr>
+    <tr>
+      <td>YAML config (<code class="language-plaintext highlighter-rouge">_config.yml</code>, <code class="language-plaintext highlighter-rouge">_data/</code>)</td>
+      <td><a href=".github/instructions/yaml-configuration.instructions.md">yaml-configuration.instructions.md</a></td>
+    </tr>
+    <tr>
+      <td>BibTeX (<code class="language-plaintext highlighter-rouge">_bibliography/</code>)</td>
+      <td><a href=".github/instructions/bibtex-bibliography.instructions.md">bibtex-bibliography.instructions.md</a></td>
+    </tr>
+    <tr>
+      <td>Liquid templates (<code class="language-plaintext highlighter-rouge">_includes/</code>, <code class="language-plaintext highlighter-rouge">_layouts/</code>)</td>
+      <td><a href=".github/instructions/liquid-templates.instructions.md">liquid-templates.instructions.md</a></td>
+    </tr>
+    <tr>
+      <td>JavaScript (<code class="language-plaintext highlighter-rouge">_scripts/</code>)</td>
+      <td><a href=".github/instructions/javascript-scripts.instructions.md">javascript-scripts.instructions.md</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="common-issues">Common Issues</h2>
+
+<p>For troubleshooting, see:</p>
+
+<ul>
+  <li><a href=".github/copilot-instructions.md#common-pitfalls--workarounds">Common Pitfalls &amp; Workarounds</a> in copilot-instructions.md</li>
+  <li><a href="/TROUBLESHOOTING/">TROUBLESHOOTING.md</a> for detailed solutions</li>
+  <li><a href="https://github.com/alshedivat/al-folio/issues">GitHub Issues</a> to search for your specific problem.</li>
+</ul>
+
   </article>
 
-  <!-- Citation disabled for GitHub Pages compatibility --><!-- References section disabled -->
+  <!-- References/bibliography disabled for GitHub Pages compatibility -->
 
-  
-
-  
   
 </div>
 

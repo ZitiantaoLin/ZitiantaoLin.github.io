@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      SEO Best Practices Guide | Zitiantao Lin
+    
+  
+</title>
+<meta name="author" content="Zitiantao Lin">
+<meta name="description" content="Graduate Research Assistant at CRAFT Lab, Northeastern University. First author of 'RaycastGrasp', awarded Best Paper at ICIR 2025.
+">
+
+  <meta name="keywords" content="Robotics, Computer Vision, Machine Learning, HCI, Northeastern University">
+
+
+
+
+
+
+
+
+
+
+<!-- Security: Content Security Policy -->
+<!-- Permissive CSP suitable for academic websites. Allows external images, videos, and common embed services. -->
+<!-- To customize for your needs, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"
+>
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Code Syntax Highlighting -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-github.css"
+  media=""
+  id="highlight_theme_light"
+>
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://zitiantaolin.github.io/SEO/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js"></script>
+  <link
+    defer
+    rel="stylesheet"
+    href="/assets/css/jekyll-pygments-themes-native.css"
+    media="none"
+    id="highlight_theme_dark"
+  >
+  <script>
+    initTheme();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Zitiantao Lin
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">SEO Best Practices Guide</h1>
+    
+  </header>
+
+  <article>
+    <h1 id="seo-best-practices-guide">SEO Best Practices Guide</h1>
+
+<p>This guide helps you optimize your al-folio website for search engines so your research and work are discoverable.</p>
+
+<!--ts-->
+
+<ul>
+  <li><a href="#seo-best-practices-guide">SEO Best Practices Guide</a>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#basic-seo-setup">Basic SEO Setup</a>
+        <ul>
+          <li><a href="#sitemap-and-robots">Sitemap and Robots</a></li>
+          <li><a href="#site-url-and-metadata">Site URL and Metadata</a></li>
+        </ul>
+      </li>
+      <li><a href="#enabling-open-graph-social-media-previews">Enabling Open Graph (Social Media Previews)</a>
+        <ul>
+          <li><a href="#what-is-open-graph">What is Open Graph?</a></li>
+          <li><a href="#enable-in-al-folio">Enable in al-folio</a></li>
+        </ul>
+      </li>
+      <li><a href="#schemaorg-markup">Schema.org Markup</a>
+        <ul>
+          <li><a href="#what-is-schemaorg">What is Schema.org?</a></li>
+          <li><a href="#enable-in-al-folio-1">Enable in al-folio</a></li>
+          <li><a href="#what-gets-marked-up">What Gets Marked Up</a></li>
+        </ul>
+      </li>
+      <li><a href="#search-console-setup">Search Console Setup</a>
+        <ul>
+          <li><a href="#google-search-console">Google Search Console</a></li>
+          <li><a href="#bing-webmaster-tools">Bing Webmaster Tools</a></li>
+        </ul>
+      </li>
+      <li><a href="#publication-indexing">Publication Indexing</a>
+        <ul>
+          <li><a href="#google-scholar">Google Scholar</a></li>
+          <li><a href="#dblp-computer-science">DBLP (Computer Science)</a></li>
+          <li><a href="#arxiv">arXiv</a></li>
+        </ul>
+      </li>
+      <li><a href="#content-optimization">Content Optimization</a>
+        <ul>
+          <li><a href="#page-titles-and-descriptions">Page Titles and Descriptions</a></li>
+          <li><a href="#heading-structure">Heading Structure</a></li>
+          <li><a href="#image-optimization">Image Optimization</a></li>
+          <li><a href="#internal-linking">Internal Linking</a></li>
+        </ul>
+      </li>
+      <li><a href="#rss-feed-for-discovery">RSS Feed for Discovery</a></li>
+      <li><a href="#performance--mobile">Performance &amp; Mobile</a></li>
+      <li><a href="#seo-checklist">SEO Checklist</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!--te-->
+
+<h2 id="overview">Overview</h2>
+
+<p>SEO (Search Engine Optimization) makes your website discoverable on Google, Bing, and other search engines. For academics, this means:</p>
+
+<ul>
+  <li>Your research becomes discoverable when people search for your work</li>
+  <li>Your CV/bio appears in search results</li>
+  <li>Your publications rank higher</li>
+  <li>More citations and collaborations</li>
+</ul>
+
+<p>al-folio includes SEO basics, but you can optimize further.</p>
+
+<hr />
+
+<h2 id="basic-seo-setup">Basic SEO Setup</h2>
+
+<h3 id="sitemap-and-robots">Sitemap and Robots</h3>
+
+<p>al-folio auto-generates a <code class="language-plaintext highlighter-rouge">sitemap.xml</code> and <code class="language-plaintext highlighter-rouge">robots.txt</code> for you. These tell search engines what pages exist.</p>
+
+<p><strong>Verify they exist:</strong></p>
+
+<ul>
+  <li>Visit <code class="language-plaintext highlighter-rouge">https://your-site.com/sitemap.xml</code> – Should show an XML list of pages</li>
+  <li>Visit <code class="language-plaintext highlighter-rouge">https://your-site.com/robots.txt</code> – Should show instructions for search engines</li>
+</ul>
+
+<p>If they’re missing:</p>
+
+<ol>
+  <li>Check <code class="language-plaintext highlighter-rouge">_config.yml</code> has a valid <code class="language-plaintext highlighter-rouge">url</code></li>
+  <li>Rebuild: <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code></li>
+  <li>Check <code class="language-plaintext highlighter-rouge">_site/</code> directory has both files</li>
+</ol>
+
+<p><strong>No configuration needed</strong> – al-folio handles this automatically.</p>
+
+<hr />
+
+<h3 id="site-url-and-metadata">Site URL and Metadata</h3>
+
+<p>Ensure <code class="language-plaintext highlighter-rouge">_config.yml</code> has correct metadata:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Your Full Name or Site Title</span>
+<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span> <span class="c1"># Brief description (1-2 sentences)</span>
+  <span class="s">A description of your research and expertise.</span>
+  <span class="s">This appears in search results.</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Your Name</span>
+<span class="na">keywords</span><span class="pi">:</span> <span class="s">machine learning, research, academia, etc.</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s">https://your-domain.com</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
+</code></pre></div></div>
+
+<p>All fields are important for SEO. <strong>Avoid leaving fields blank.</strong></p>
+
+<hr />
+
+<h2 id="enabling-open-graph-social-media-previews">Enabling Open Graph (Social Media Previews)</h2>
+
+<h3 id="what-is-open-graph">What is Open Graph?</h3>
+
+<p>When someone shares your page on Twitter, Facebook, LinkedIn, etc., Open Graph controls what preview appears.</p>
+
+<p><strong>Without Open Graph:</strong></p>
+
+<ul>
+  <li>Generic title</li>
+  <li>No image</li>
+  <li>Ugly preview</li>
+</ul>
+
+<p><strong>With Open Graph:</strong></p>
+
+<ul>
+  <li>Your custom title</li>
+  <li>Your custom image (photo, diagram, etc.)</li>
+  <li>Custom description</li>
+  <li>Professional preview</li>
+</ul>
+
+<h3 id="enable-in-al-folio">Enable in al-folio</h3>
+
+<p>Open Graph is disabled by default. To enable:</p>
+
+<ol>
+  <li>
+    <p><strong>Edit <code class="language-plaintext highlighter-rouge">_config.yml</code>:</strong></p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">serve_og_meta</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># Change from false to true</span>
+<span class="na">og_image</span><span class="pi">:</span> <span class="s">/assets/img/og-image.png</span> <span class="c1"># Path to your image (1200x630px recommended)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Create your OG image:</strong>
+    <ul>
+      <li>Size: 1200x630 pixels</li>
+      <li>Format: PNG or JPG</li>
+      <li>Content: Your name/logo + key info</li>
+      <li>Save to: <code class="language-plaintext highlighter-rouge">assets/img/og-image.png</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Commit and deploy</strong></p>
+  </li>
+  <li><strong>Test it:</strong>
+    <ul>
+      <li>Use <a href="https://developers.facebook.com/tools/debug/sharing/">Facebook’s Sharing Debugger</a></li>
+      <li>Paste your site URL</li>
+      <li>You should see your custom image and title</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Per-page OG images:</strong></p>
+
+<p>Add to the frontmatter of a blog post or page:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My Research Paper</span>
+<span class="na">og_image</span><span class="pi">:</span> <span class="s">/assets/img/paper-diagram.png</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="schemaorg-markup">Schema.org Markup</h2>
+
+<h3 id="what-is-schemaorg">What is Schema.org?</h3>
+
+<p>Schema.org is structured data that tells search engines what kind of content is on your page:</p>
+
+<ul>
+  <li>“This is a Person” (your bio page)</li>
+  <li>“This is a Publication” (your paper)</li>
+  <li>“This is a BlogPosting” (your article)</li>
+</ul>
+
+<p>Benefits:</p>
+
+<ul>
+  <li>Rich snippets in search results</li>
+  <li>Better knowledge graph information</li>
+  <li>Schema validation helps Google understand your site</li>
+</ul>
+
+<h3 id="enable-in-al-folio-1">Enable in al-folio</h3>
+
+<p>Enable in <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">serve_schema_org</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># Change from false to true</span>
+</code></pre></div></div>
+
+<p>That’s it! al-folio automatically marks up:</p>
+
+<ul>
+  <li><strong>Author info</strong> (Person schema with name, URL, photo)</li>
+  <li><strong>Blog posts</strong> (BlogPosting schema with date, title, description)</li>
+  <li><strong>Publications</strong> (CreativeWork/ScholarlyArticle schema)</li>
+</ul>
+
+<h3 id="what-gets-marked-up">What Gets Marked Up</h3>
+
+<p><strong>Homepage (Person):</strong></p>
+
+<ul>
+  <li>Your name, photo, description</li>
+  <li>Links to your profiles (LinkedIn, GitHub, etc.)</li>
+</ul>
+
+<p><strong>Blog posts (BlogPosting):</strong></p>
+
+<ul>
+  <li>Title, date, author, description</li>
+  <li>Content</li>
+  <li>Publication date and modified date</li>
+</ul>
+
+<p><strong>Publications (ScholarlyArticle):</strong></p>
+
+<ul>
+  <li>Title, authors, abstract</li>
+  <li>Publication date, venue</li>
+  <li>URL and PDF links</li>
+</ul>
+
+<hr />
+
+<h2 id="search-console-setup">Search Console Setup</h2>
+
+<h3 id="google-search-console">Google Search Console</h3>
+
+<p><strong>Google Search Console</strong> lets you monitor how your site appears in Google search results.</p>
+
+<p><strong>Setup:</strong></p>
+
+<ol>
+  <li>Go to <a href="https://search.google.com/search-console">Google Search Console</a></li>
+  <li>Add your website:
+    <ul>
+      <li>Click <strong>“URL prefix”</strong></li>
+      <li>Enter your site URL: <code class="language-plaintext highlighter-rouge">https://your-domain.com</code></li>
+    </ul>
+  </li>
+  <li>Verify ownership (choose one method):
+    <ul>
+      <li><strong>HTML file upload</strong> – Download file, add to repository root</li>
+      <li><strong>HTML tag</strong> – Copy meta tag to <code class="language-plaintext highlighter-rouge">_config.yml</code> → redeploy</li>
+      <li><strong>Google Analytics</strong> – If you already use Google Analytics</li>
+      <li><strong>DNS record</strong> – Advanced (if you own the domain)</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Add to <code class="language-plaintext highlighter-rouge">_config.yml</code>:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">google_site_verification</span><span class="pi">:</span> <span class="s">YOUR_VERIFICATION_CODE</span>
+</code></pre></div></div>
+
+<p>(Replace <code class="language-plaintext highlighter-rouge">YOUR_VERIFICATION_CODE</code> with the code from Search Console.)</p>
+
+<p><strong>Monitor in Search Console:</strong></p>
+
+<ul>
+  <li><strong>Performance</strong> – Which queries bring traffic, your ranking position</li>
+  <li><strong>Coverage</strong> – Any indexing errors</li>
+  <li><strong>Enhancements</strong> – Schema.org validation</li>
+  <li><strong>Sitemaps</strong> – Your sitemap status</li>
+</ul>
+
+<hr />
+
+<h3 id="bing-webmaster-tools">Bing Webmaster Tools</h3>
+
+<p>Similar to Google Search Console but for Bing search:</p>
+
+<ol>
+  <li>Go to <a href="https://www.bing.com/webmasters">Bing Webmaster Tools</a></li>
+  <li>Add your site</li>
+  <li>Verify (usually auto-verifies if you verified Google)</li>
+  <li>Add to <code class="language-plaintext highlighter-rouge">_config.yml</code>:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">bing_site_verification</span><span class="pi">:</span> <span class="s">YOUR_BING_CODE</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>Note:</strong> Bing commands are optional but recommended. Check both console dashboards regularly.</p>
+
+<hr />
+
+<h2 id="publication-indexing">Publication Indexing</h2>
+
+<h3 id="google-scholar">Google Scholar</h3>
+
+<p><strong>Goal:</strong> Get your publications listed on Google Scholar so they show up in scholar search results.</p>
+
+<p><strong>Google Scholar auto-crawls:</strong></p>
+
+<ul>
+  <li>Your website automatically (if publicly accessible)</li>
+  <li>Your publications page if it has proper markup</li>
+  <li>PDFs linked from your site</li>
+</ul>
+
+<p><strong>To improve Scholar indexing:</strong></p>
+
+<ol>
+  <li>
+    <p><strong>Ensure BibTeX has proper format:</strong></p>
+
+    <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@article</span><span class="p">{</span><span class="nl">mykey</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{Your Paper Title}</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{Your Name and Co-Author}</span><span class="p">,</span>
+  <span class="na">journal</span><span class="p">=</span><span class="s">{Journal Name}</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">volume</span><span class="p">=</span><span class="s">{1}</span><span class="p">,</span>
+  <span class="na">pages</span><span class="p">=</span><span class="s">{1-10}</span><span class="p">,</span>
+  <span class="na">doi</span><span class="p">=</span><span class="s">{10.1234/doi}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Add PDFs to BibTeX:</strong></p>
+
+    <div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@article</span><span class="p">{</span><span class="nl">mykey</span><span class="p">,</span>
+  <span class="err">#</span> <span class="err">...</span> <span class="err">other</span> <span class="err">fields</span> <span class="err">...</span>
+  <span class="err">pdf={my-paper.pdf</span><span class="p">}</span>  <span class="c"># File at assets/pdf/my-paper.pdf</span>
+<span class="c">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Submit to Google Scholar (optional):</strong>
+    <ul>
+      <li>Go to <a href="https://scholar.google.com/citations">Google Scholar Author Profile</a></li>
+      <li>Create a profile</li>
+      <li>Google will find your papers automatically within weeks</li>
+    </ul>
+  </li>
+  <li><strong>Wait 3-6 months</strong> – Google Scholar takes time to index</li>
+</ol>
+
+<hr />
+
+<h3 id="dblp-computer-science">DBLP (Computer Science)</h3>
+
+<p>If your research is computer science related:</p>
+
+<ol>
+  <li>Go to <a href="https://dblp.org/">DBLP</a></li>
+  <li>Search for yourself or your papers</li>
+  <li>If missing, <a href="https://dblp.org/db/contrib/">Submit via DBLP</a> (requires account)</li>
+  <li>DBLP will verify and add your work</li>
+</ol>
+
+<hr />
+
+<h3 id="arxiv">arXiv</h3>
+
+<p>If you have preprints:</p>
+
+<ol>
+  <li>Go to <a href="https://arxiv.org/">arXiv.org</a></li>
+  <li>Submit your preprint</li>
+  <li>Once listed, arXiv automatically indexes it across search engines</li>
+</ol>
+
+<p><strong>Add arXiv link to BibTeX:</strong></p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@article</span><span class="p">{</span><span class="nl">mykey</span><span class="p">,</span>
+  <span class="err">#</span> <span class="err">...</span> <span class="err">other</span> <span class="err">fields</span> <span class="err">...</span>
+  <span class="err">arxiv={2024.12345</span><span class="p">}</span>  <span class="c"># arXiv ID</span>
+<span class="c">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="content-optimization">Content Optimization</h2>
+
+<h3 id="page-titles-and-descriptions">Page Titles and Descriptions</h3>
+
+<p>Every page needs a title and description. These show in search results.</p>
+
+<p><strong>In <code class="language-plaintext highlighter-rouge">_config.yml</code>:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Jane Smith - Computer Science Researcher</span>
+<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+  <span class="s">Academic website of Jane Smith, focusing on machine learning and AI ethics.</span>
+</code></pre></div></div>
+
+<p><strong>In page/post frontmatter:</strong></p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Novel Deep Learning Architecture for Climate Modeling</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">A new approach to improving climate model accuracy with deep learning</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p><strong>Checklist:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Title under 60 characters (so it doesn’t get cut off)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Description 120-160 characters</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Include your name in the site title</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Include keywords naturally</li>
+</ul>
+
+<hr />
+
+<h3 id="heading-structure">Heading Structure</h3>
+
+<p>Use proper HTML heading hierarchy for both SEO and accessibility:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># H1: Main Page Title</span>
+
+Use one H1 per page, usually your blog post or page title
+
+<span class="gu">## H2: Section Heading</span>
+
+<span class="gu">### H3: Subsection</span>
+
+<span class="gu">### H3: Another subsection</span>
+
+<span class="gu">## H2: Another Section</span>
+</code></pre></div></div>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+  <li>Search engines understand your content structure</li>
+  <li>Screen readers can navigate better</li>
+  <li>Visitors can scan your content</li>
+</ul>
+
+<hr />
+
+<h3 id="image-optimization">Image Optimization</h3>
+
+<p><strong>For SEO:</strong></p>
+
+<ul>
+  <li>Use descriptive filenames: <code class="language-plaintext highlighter-rouge">neural-network-architecture.png</code> (not <code class="language-plaintext highlighter-rouge">img1.png</code>)</li>
+  <li>Add alt text (also helps accessibility):
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Neural network showing three layers with training accuracy of 95%</span><span class="p">](</span><span class="sx">assets/img/neural-network.png</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>For performance:</strong></p>
+
+<ul>
+  <li>Optimize image file size (use tools like TinyPNG)</li>
+  <li>Use modern formats (WebP instead of large JPGs)</li>
+  <li>Responsive images (different sizes for mobile vs desktop)</li>
+</ul>
+
+<hr />
+
+<h3 id="internal-linking">Internal Linking</h3>
+
+<p>Link between your own pages strategically:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>See my <span class="p">[</span><span class="nv">publication on climate AI</span><span class="p">](</span><span class="sx">./publications/</span><span class="p">)</span> or my <span class="p">[</span><span class="nv">blog post on neural networks</span><span class="p">](</span><span class="sx">/blog/2024/neural-networks/</span><span class="p">)</span>.
+</code></pre></div></div>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+  <li>Search engines crawl through your links</li>
+  <li>Users discover more of your content</li>
+  <li>Distributes “authority” across your site</li>
+</ul>
+
+<hr />
+
+<h2 id="rss-feed-for-discovery">RSS Feed for Discovery</h2>
+
+<p>al-folio auto-generates an RSS feed at <code class="language-plaintext highlighter-rouge">/feed.xml</code>.</p>
+
+<p><strong>Why RSS matters:</strong></p>
+
+<ul>
+  <li>Content aggregators pick up your posts</li>
+  <li>Researchers can subscribe to your updates</li>
+  <li>Improves discoverability</li>
+</ul>
+
+<p><strong>Ensure your feed works:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># In _config.yml</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Your Site</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Your site description</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s">https://your-domain.com</span> <span class="c1"># MUST be complete URL</span>
+</code></pre></div></div>
+
+<p><strong>Test your feed:</strong></p>
+
+<ul>
+  <li>Visit <code class="language-plaintext highlighter-rouge">https://your-site.com/feed.xml</code></li>
+  <li>Should show XML with your recent posts</li>
+  <li>Try subscribing in a feed reader (Feedly, etc.)</li>
+</ul>
+
+<hr />
+
+<h2 id="performance--mobile">Performance &amp; Mobile</h2>
+
+<p>Search engines favor fast, mobile-friendly sites.</p>
+
+<p><strong>Check your site:</strong></p>
+
+<ul>
+  <li>Use <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a></li>
+  <li>Enter your site URL</li>
+  <li>Review recommendations</li>
+  <li>al-folio already optimizes for performance, but you can improve further:
+    <ul>
+      <li>Compress images</li>
+      <li>Minimize CSS/JS (enabled by default)</li>
+      <li>Use lazy loading (already enabled)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Mobile optimization:</strong></p>
+
+<ul>
+  <li>al-folio is responsive by default</li>
+  <li>Test on phones/tablets</li>
+  <li>Ensure buttons are large enough to tap</li>
+  <li>Check readability on small screens</li>
+</ul>
+
+<hr />
+
+<h2 id="seo-checklist">SEO Checklist</h2>
+
+<p>Before considering your site “SEO optimized”:</p>
+
+<p><strong>Basic Setup:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">_config.yml</code> has <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">author</code>, <code class="language-plaintext highlighter-rouge">url</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Sitemap accessible at <code class="language-plaintext highlighter-rouge">/sitemap.xml</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">robots.txt</code> accessible at <code class="language-plaintext highlighter-rouge">/robots.txt</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Mobile-friendly (test on phone)</li>
+</ul>
+
+<p><strong>Search Console:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Google Search Console linked</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Bing Webmaster Tools linked (optional but recommended)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />No major indexing errors</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Sitemaps submitted</li>
+</ul>
+
+<p><strong>Schema/Open Graph:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">serve_og_meta: true</code> (for social sharing)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">serve_schema_org: true</code> (for structured data)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test OG with <a href="https://developers.facebook.com/tools/debug/sharing/">Facebook Debugger</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Validate schema at <a href="https://validator.schema.org/">Schema.org Validator</a></li>
+</ul>
+
+<p><strong>Content:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Every page has unique title (under 60 chars)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Every page has description (120-160 chars)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Blog posts have proper dates</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Images have descriptive alt text</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Headings follow proper hierarchy</li>
+</ul>
+
+<p><strong>Publications:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />BibTeX entries have proper format</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />PDFs linked from BibTeX</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Submitted to Google Scholar (optional)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Indexed on DBLP or arXiv (if applicable)</li>
+</ul>
+
+<p><strong>Performance:</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Site loads under 3 seconds (check PageSpeed)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />No broken links (use lighthouse or similar)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />RSS feed works (check <code class="language-plaintext highlighter-rouge">/feed.xml</code>)</li>
+</ul>
+
+<hr />
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><strong><a href="https://developers.google.com/search">Google Search Central</a></strong> – Official SEO guide</li>
+  <li><strong><a href="https://moz.com/beginners-guide-to-seo">Moz SEO Checklist</a></strong> – Beginner-friendly guide</li>
+  <li><strong><a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a></strong> – Performance analysis</li>
+  <li><strong><a href="https://schema.org/">Schema.org</a></strong> – Structured data reference</li>
+  <li><strong><a href="https://webaim.org/">WebAIM</a></strong> – Accessibility (helps SEO too)</li>
+  <li><strong><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpombljlkpstvnztVTNyZe">Lighthouse Audit</a></strong> – Browser extension</li>
+</ul>
+
+<hr />
+
+<p><strong>Next Steps:</strong></p>
+
+<ol>
+  <li>Enable Open Graph and Schema.org in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>Set up Google Search Console and Bing Webmaster Tools</li>
+  <li>Optimize your page titles and descriptions</li>
+  <li>Add alt text to images and PDFs to your BibTeX</li>
+  <li>Monitor search console regularly for indexing issues</li>
+</ol>
+
+<p>Your research will be more discoverable with these optimizations! 🔍</p>
+
+  </article>
+
+  <!-- References/bibliography disabled for GitHub Pages compatibility -->
+
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    
+
+    <div class="container">
+      
+  &copy; Copyright 2026
+  Zitiantao
+  
+  Lin. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+  
+  
+    Last updated: February 23, 2026.
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+<!-- Badges -->
+
+
+
+
+  <!-- MathJax -->
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+    integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+    crossorigin="anonymous"
+  ></script>
+  
+    <script src="/assets/js/mathjax-setup.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
+      crossorigin="anonymous"
+    ></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js"></script>
+  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js"></script>
+
+
+
+
+  </body>
+</html>

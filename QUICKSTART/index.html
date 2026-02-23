@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Quick Start Guide | Zitiantao Lin
+    
+  
+</title>
+<meta name="author" content="Zitiantao Lin">
+<meta name="description" content="Graduate Research Assistant at CRAFT Lab, Northeastern University. First author of 'RaycastGrasp', awarded Best Paper at ICIR 2025.
+">
+
+  <meta name="keywords" content="Robotics, Computer Vision, Machine Learning, HCI, Northeastern University">
+
+
+
+
+
+
+
+
+
+
+<!-- Security: Content Security Policy -->
+<!-- Permissive CSP suitable for academic websites. Allows external images, videos, and common embed services. -->
+<!-- To customize for your needs, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"
+>
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+  integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+  crossorigin="anonymous"
+>
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css">
+<link
+  defer
+  rel="stylesheet"
+  type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+>
+
+<!-- Code Syntax Highlighting -->
+<link
+  defer
+  rel="stylesheet"
+  href="/assets/css/jekyll-pygments-themes-github.css"
+  media=""
+  id="highlight_theme_light"
+>
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link
+    rel="shortcut icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+  >
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="https://zitiantaolin.github.io/QUICKSTART/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js"></script>
+  <link
+    defer
+    rel="stylesheet"
+    href="/assets/css/jekyll-pygments-themes-native.css"
+    media="none"
+    id="highlight_theme_dark"
+  >
+  <script>
+    initTheme();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Zitiantao Lin
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Quick Start Guide</h1>
+    
+  </header>
+
+  <article>
+    <h1 id="quick-start-guide">Quick Start Guide</h1>
+
+<p><strong>Get your al-folio site running in 5 minutes.</strong> This guide is for users who just want a working website quickly without deep customization.</p>
+
+<blockquote>
+  <p><strong>Video Tutorial:</strong> Watch a walkthrough of these steps <a href="/assets/video/tutorial_al_folio.mp4">here</a></p>
+</blockquote>
+
+<!--ts-->
+
+<ul>
+  <li><a href="#quick-start-guide">Quick Start Guide</a>
+    <ul>
+      <li><a href="#step-1-create-your-repository-1-min">Step 1: Create Your Repository (1 min)</a></li>
+      <li><a href="#step-2-configure-deployment-1-min">Step 2: Configure Deployment (1 min)</a></li>
+      <li><a href="#step-3-personalize-2-min">Step 3: Personalize (2 min)</a></li>
+      <li><a href="#step-4-view-your-site-1-min">Step 4: View Your Site (1 min)</a></li>
+      <li><a href="#whats-next">What’s Next?</a>
+        <ul>
+          <li><a href="#add-your-content">Add Your Content</a></li>
+          <li><a href="#customize-appearance">Customize Appearance</a></li>
+          <li><a href="#learn-more">Learn More</a></li>
+          <li><a href="#get-help-from-ai">Get Help from AI</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!--te-->
+
+<h2 id="step-1-create-your-repository-1-min">Step 1: Create Your Repository (1 min)</h2>
+
+<p><strong>⚠️ Important:</strong> Use the <strong>“Use this template”</strong> button, NOT the fork button. This ensures your site is independent and you won’t accidentally submit your personal changes back to the al-folio project.</p>
+
+<ol>
+  <li>Go to the <a href="https://github.com/alshedivat/al-folio">al-folio repository</a></li>
+  <li>Click the green <strong>“Use this template”</strong> button (top right), then select <strong>“Create a new repository”</strong></li>
+  <li>Name your repository:
+    <ul>
+      <li><strong>Personal/Organization site (if you want your site to be at <code class="language-plaintext highlighter-rouge">username.github.io</code>):</strong> <code class="language-plaintext highlighter-rouge">username.github.io</code> (replace <code class="language-plaintext highlighter-rouge">username</code> with your GitHub username)</li>
+      <li><strong>Project site (if you want your site to be at <code class="language-plaintext highlighter-rouge">username.github.io/project-name</code>):</strong> Any name (e.g., <code class="language-plaintext highlighter-rouge">my-research-website</code>)</li>
+    </ul>
+  </li>
+  <li>Click <strong>“Create repository from template”</strong></li>
+</ol>
+
+<p><strong>Already forked by mistake?</strong> No problem. Your fork will work fine—just be careful when making changes. Create a new branch for your updates (e.g., <code class="language-plaintext highlighter-rouge">git checkout -b my-site-updates</code>) and make sure you push to <strong>your own repository</strong>, not the main al-folio project.</p>
+
+<h2 id="step-2-configure-deployment-1-min">Step 2: Configure Deployment (1 min)</h2>
+
+<ol>
+  <li>Go to your new repository → <strong>Settings</strong> → <strong>Actions</strong> → <strong>General</strong> → <strong>Workflow permissions</strong></li>
+  <li>Select <strong>Read and write permissions</strong></li>
+  <li>Click <strong>Save</strong></li>
+</ol>
+
+<h2 id="step-3-personalize-2-min">Step 3: Personalize (2 min)</h2>
+
+<ol>
+  <li>Open <code class="language-plaintext highlighter-rouge">_config.yml</code> in your repository</li>
+  <li>Update these fields:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">My Website</span>
+<span class="na">first_name</span><span class="pi">:</span> <span class="s">Your</span>
+<span class="na">last_name</span><span class="pi">:</span> <span class="s">Name</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s">https://your-username.github.io</span> <span class="c1"># or your custom domain</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="c1"># Leave this empty (do NOT delete it)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Click <strong>Commit changes</strong> (at the bottom of the page)</li>
+</ol>
+
+<h2 id="step-4-view-your-site-1-min">Step 4: View Your Site (1 min)</h2>
+
+<ol>
+  <li>Go to your repository → <strong>Actions</strong> tab</li>
+  <li>Wait for the “Deploy site” workflow to complete (look for a green checkmark, ~4 minutes)</li>
+  <li>Go to <strong>Settings</strong> → <strong>Pages</strong> → <strong>Build and deployment</strong></li>
+  <li>Make sure <strong>Source</strong> is set to <strong>Deploy from a branch</strong></li>
+  <li>Set the branch to <strong>gh-pages</strong> (NOT main)</li>
+  <li>Wait for the “pages-build-deployment” workflow to complete (~45 seconds)</li>
+  <li>Visit <code class="language-plaintext highlighter-rouge">https://your-username.github.io</code> in your browser</li>
+</ol>
+
+<p><strong>That’s it!</strong> Your site is live. You now have a working al-folio website.</p>
+
+<hr />
+
+<h2 id="whats-next">What’s Next?</h2>
+
+<p>Once your site is running, explore these customization options:</p>
+
+<h3 id="add-your-content">Add Your Content</h3>
+
+<ul>
+  <li><strong>Profile picture:</strong> Replace <code class="language-plaintext highlighter-rouge">assets/img/prof_pic.jpg</code> with your photo</li>
+  <li><strong>About page:</strong> Edit <code class="language-plaintext highlighter-rouge">_pages/about.md</code> to write your bio</li>
+  <li><strong>Publications:</strong> Add entries to <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code></li>
+  <li><strong>Blog posts:</strong> Create files in <code class="language-plaintext highlighter-rouge">_posts/</code> with format <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code></li>
+</ul>
+
+<h3 id="customize-appearance">Customize Appearance</h3>
+
+<ul>
+  <li><strong>Theme color:</strong> Edit <code class="language-plaintext highlighter-rouge">_config.yml</code>, search for <code class="language-plaintext highlighter-rouge">theme_color</code></li>
+  <li><strong>Enable/disable sections:</strong> In <code class="language-plaintext highlighter-rouge">_config.yml</code>, look for <code class="language-plaintext highlighter-rouge">enabled: false/true</code> options</li>
+  <li><strong>Social media links:</strong> Edit <code class="language-plaintext highlighter-rouge">_data/socials.yml</code></li>
+</ul>
+
+<h3 id="learn-more">Learn More</h3>
+
+<ul>
+  <li>Installation and local setup options: <a href="/INSTALL/">INSTALL.md</a></li>
+  <li>Full customization guide: <a href="CUSTOMIZE.md">CUSTOMIZE.md</a></li>
+  <li>Frequently asked questions: <a href="/FAQ/">FAQ.md</a></li>
+  <li>Troubleshooting: <a href="/TROUBLESHOOTING/">TROUBLESHOOTING.md</a></li>
+</ul>
+
+<h3 id="get-help-from-ai">Get Help from AI</h3>
+
+<p>Use the <strong>GitHub Copilot Customization Agent</strong> (if you have Copilot) to:</p>
+
+<ul>
+  <li>Get step-by-step help with customizations</li>
+  <li>Understand how to modify specific features</li>
+  <li>Apply changes directly to your site</li>
+</ul>
+
+<p>See <a href="CUSTOMIZE.md#github-copilot-customization-agent">CUSTOMIZE.md § GitHub Copilot Customization Agent</a> for details.</p>
+
+<hr />
+
+<p><strong>Common first steps:</strong></p>
+
+<ul>
+  <li>Change the theme color in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>Add your social media links in <code class="language-plaintext highlighter-rouge">_data/socials.yml</code></li>
+  <li>Upload your profile picture to <code class="language-plaintext highlighter-rouge">assets/img/prof_pic.jpg</code></li>
+  <li>Write a short bio in <code class="language-plaintext highlighter-rouge">_pages/about.md</code></li>
+</ul>
+
+<p>Happy customizing! 🎉</p>
+
+  </article>
+
+  <!-- References/bibliography disabled for GitHub Pages compatibility -->
+
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    
+
+    <div class="container">
+      
+  &copy; Copyright 2026
+  Zitiantao
+  
+  Lin. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+  
+  
+    Last updated: February 23, 2026.
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+  integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+  crossorigin="anonymous"
+></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js"></script>
+<script defer src="/assets/js/common.js"></script>
+<script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js"></script>
+
+<!-- Badges -->
+
+
+
+
+  <!-- MathJax -->
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+    integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+    crossorigin="anonymous"
+  ></script>
+  
+    <script src="/assets/js/mathjax-setup.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
+      crossorigin="anonymous"
+    ></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js"></script>
+  <ninja-keys hideBreadcrumbs noAutoLoadMdIcons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js"></script>
+
+
+
+
+  </body>
+</html>
