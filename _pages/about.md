@@ -4,7 +4,7 @@
   <div style="width:260px;">
     <div style="position:relative; width:260px; height:260px; overflow:hidden; border-radius:16px;">
       <img id="carousel-img"
-           src="/assets/img/prof_pic.jpg"
+           src="/assets/img/ewfe(1).jpg"
            style="width:100%; height:100%; object-fit:cover; display:block;" />
       <button onclick="prevImg()"
               style="position:absolute; left:10px; top:50%; transform:translateY(-50%);
@@ -43,8 +43,8 @@
 
 <script>
   const imgs = [
-    "/assets/img/prof_pic.jpg",
-    "/assets/img/photo2.jpg"
+    "/assets/img/ewfe(1).jpg",
+    "/assets/img/PhD2.jpg"
   ];
   let idx = 0;
 
