@@ -1,3 +1,11 @@
+---
+layout: about
+title: about
+permalink: /
+subtitle: Master of Science in Information Systems · Northeastern University
+profile: false
+---
+
 <div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap;">
 
   <!-- Left: image carousel -->
@@ -79,12 +87,6 @@
 </script>
 
 
----
-layout: about
-title: about
-permalink: /
-subtitle: Master of Science in Information Systems · Northeastern University
-profile: false
 
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
