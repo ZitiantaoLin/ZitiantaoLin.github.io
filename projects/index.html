@@ -16,13 +16,12 @@
   
   
     
-      Quick Start Guide | Zitiantao Lin
+      projects | Zitiantao Lin
     
   
 </title>
 <meta name="author" content="Zitiantao Lin">
-<meta name="description" content="Graduate Research Assistant at CRAFT Lab, Northeastern University. First author of 'RaycastGrasp', awarded Best Paper at ICIR 2025.
-">
+<meta name="description" content="A growing collection of your cool projects.">
 
   <meta name="keywords" content="Robotics, Computer Vision, Machine Learning, HCI, Northeastern University">
 
@@ -86,7 +85,7 @@
   >
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="https://zitiantaolin.github.io/QUICKSTART/">
+<link rel="canonical" href="https://zitiantaolin.github.io/projects/">
 
 
   <!-- Dark Mode -->
@@ -195,8 +194,10 @@
             
               
                 
-                <li class="nav-item ">
+                <li class="nav-item active">
                   <a class="nav-link" href="/projects/">projects
+                    
+                      <span class="sr-only">(current)</span>
                     
                   </a>
                 </li>
@@ -254,153 +255,45 @@
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">Quick Start Guide</h1>
+    <h1 class="post-title">projects</h1>
+    
+      <p class="post-description">A growing collection of your cool projects.</p>
     
   </header>
 
   <article>
-    <h1 id="quick-start-guide">Quick Start Guide</h1>
+    <!-- pages/projects.md -->
+<div class="projects">
 
-<p><strong>Get your al-folio site running in 5 minutes.</strong> This guide is for users who just want a working website quickly without deep customization.</p>
+  <!-- Display categorized projects -->
+  
+  <a id="work" href=".#work">
+    <h2 class="category">work</h2>
+  </a>
+  
+  
+  <!-- Generate cards for each project -->
+  
+  <div class="row row-cols-1 row-cols-md-3">
+    
+  </div>
+  
+  
+  <a id="fun" href=".#fun">
+    <h2 class="category">fun</h2>
+  </a>
+  
+  
+  <!-- Generate cards for each project -->
+  
+  <div class="row row-cols-1 row-cols-md-3">
+    
+  </div>
+  
+  
 
-<blockquote>
-  <p><strong>Video Tutorial:</strong> Watch a walkthrough of these steps <a href="/assets/video/tutorial_al_folio.mp4">here</a></p>
-</blockquote>
 
-<!--ts-->
-
-<ul>
-  <li><a href="#quick-start-guide">Quick Start Guide</a>
-    <ul>
-      <li><a href="#step-1-create-your-repository-1-min">Step 1: Create Your Repository (1 min)</a></li>
-      <li><a href="#step-2-configure-deployment-1-min">Step 2: Configure Deployment (1 min)</a></li>
-      <li><a href="#step-3-personalize-2-min">Step 3: Personalize (2 min)</a></li>
-      <li><a href="#step-4-view-your-site-1-min">Step 4: View Your Site (1 min)</a></li>
-      <li><a href="#whats-next">What’s Next?</a>
-        <ul>
-          <li><a href="#add-your-content">Add Your Content</a></li>
-          <li><a href="#customize-appearance">Customize Appearance</a></li>
-          <li><a href="#learn-more">Learn More</a></li>
-          <li><a href="#get-help-from-ai">Get Help from AI</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<!--te-->
-
-<h2 id="step-1-create-your-repository-1-min">Step 1: Create Your Repository (1 min)</h2>
-
-<p><strong>⚠️ Important:</strong> Use the <strong>“Use this template”</strong> button, NOT the fork button. This ensures your site is independent and you won’t accidentally submit your personal changes back to the al-folio project.</p>
-
-<ol>
-  <li>Go to the <a href="https://github.com/alshedivat/al-folio">al-folio repository</a></li>
-  <li>Click the green <strong>“Use this template”</strong> button (top right), then select <strong>“Create a new repository”</strong></li>
-  <li>Name your repository:
-    <ul>
-      <li><strong>Personal/Organization site (if you want your site to be at <code class="language-plaintext highlighter-rouge">username.github.io</code>):</strong> <code class="language-plaintext highlighter-rouge">username.github.io</code> (replace <code class="language-plaintext highlighter-rouge">username</code> with your GitHub username)</li>
-      <li><strong>Project site (if you want your site to be at <code class="language-plaintext highlighter-rouge">username.github.io/project-name</code>):</strong> Any name (e.g., <code class="language-plaintext highlighter-rouge">my-research-website</code>)</li>
-    </ul>
-  </li>
-  <li>Click <strong>“Create repository from template”</strong></li>
-</ol>
-
-<p><strong>Already forked by mistake?</strong> No problem. Your fork will work fine—just be careful when making changes. Create a new branch for your updates (e.g., <code class="language-plaintext highlighter-rouge">git checkout -b my-site-updates</code>) and make sure you push to <strong>your own repository</strong>, not the main al-folio project.</p>
-
-<h2 id="step-2-configure-deployment-1-min">Step 2: Configure Deployment (1 min)</h2>
-
-<ol>
-  <li>Go to your new repository → <strong>Settings</strong> → <strong>Actions</strong> → <strong>General</strong> → <strong>Workflow permissions</strong></li>
-  <li>Select <strong>Read and write permissions</strong></li>
-  <li>Click <strong>Save</strong></li>
-</ol>
-
-<h2 id="step-3-personalize-2-min">Step 3: Personalize (2 min)</h2>
-
-<ol>
-  <li>Open <code class="language-plaintext highlighter-rouge">_config.yml</code> in your repository</li>
-  <li>Update these fields:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">My Website</span>
-<span class="na">first_name</span><span class="pi">:</span> <span class="s">Your</span>
-<span class="na">last_name</span><span class="pi">:</span> <span class="s">Name</span>
-<span class="na">url</span><span class="pi">:</span> <span class="s">https://your-username.github.io</span> <span class="c1"># or your custom domain</span>
-<span class="na">baseurl</span><span class="pi">:</span> <span class="c1"># Leave this empty (do NOT delete it)</span>
-</code></pre></div>    </div>
-  </li>
-  <li>Click <strong>Commit changes</strong> (at the bottom of the page)</li>
-</ol>
-
-<h2 id="step-4-view-your-site-1-min">Step 4: View Your Site (1 min)</h2>
-
-<ol>
-  <li>Go to your repository → <strong>Actions</strong> tab</li>
-  <li>Wait for the “Deploy site” workflow to complete (look for a green checkmark, ~4 minutes)</li>
-  <li>Go to <strong>Settings</strong> → <strong>Pages</strong> → <strong>Build and deployment</strong></li>
-  <li>Make sure <strong>Source</strong> is set to <strong>Deploy from a branch</strong></li>
-  <li>Set the branch to <strong>gh-pages</strong> (NOT main)</li>
-  <li>Wait for the “pages-build-deployment” workflow to complete (~45 seconds)</li>
-  <li>Visit <code class="language-plaintext highlighter-rouge">https://your-username.github.io</code> in your browser</li>
-</ol>
-
-<p><strong>That’s it!</strong> Your site is live. You now have a working al-folio website.</p>
-
-<hr />
-
-<h2 id="whats-next">What’s Next?</h2>
-
-<p>Once your site is running, explore these customization options:</p>
-
-<h3 id="add-your-content">Add Your Content</h3>
-
-<ul>
-  <li><strong>Profile picture:</strong> Replace <code class="language-plaintext highlighter-rouge">assets/img/prof_pic.jpg</code> with your photo</li>
-  <li><strong>About page:</strong> Edit <code class="language-plaintext highlighter-rouge">_pages/about.md</code> to write your bio</li>
-  <li><strong>Publications:</strong> Add entries to <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code></li>
-  <li><strong>Blog posts:</strong> Create files in <code class="language-plaintext highlighter-rouge">_posts/</code> with format <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code></li>
-</ul>
-
-<h3 id="customize-appearance">Customize Appearance</h3>
-
-<ul>
-  <li><strong>Theme color:</strong> Edit <code class="language-plaintext highlighter-rouge">_config.yml</code>, search for <code class="language-plaintext highlighter-rouge">theme_color</code></li>
-  <li><strong>Enable/disable sections:</strong> In <code class="language-plaintext highlighter-rouge">_config.yml</code>, look for <code class="language-plaintext highlighter-rouge">enabled: false/true</code> options</li>
-  <li><strong>Social media links:</strong> Edit <code class="language-plaintext highlighter-rouge">_data/socials.yml</code></li>
-</ul>
-
-<h3 id="learn-more">Learn More</h3>
-
-<ul>
-  <li>Installation and local setup options: <a href="/INSTALL/">INSTALL.md</a></li>
-  <li>Full customization guide: <a href="CUSTOMIZE.md">CUSTOMIZE.md</a></li>
-  <li>Frequently asked questions: <a href="/FAQ/">FAQ.md</a></li>
-  <li>Troubleshooting: <a href="/TROUBLESHOOTING/">TROUBLESHOOTING.md</a></li>
-</ul>
-
-<h3 id="get-help-from-ai">Get Help from AI</h3>
-
-<p>Use the <strong>GitHub Copilot Customization Agent</strong> (if you have Copilot) to:</p>
-
-<ul>
-  <li>Get step-by-step help with customizations</li>
-  <li>Understand how to modify specific features</li>
-  <li>Apply changes directly to your site</li>
-</ul>
-
-<p>See <a href="CUSTOMIZE.md#github-copilot-customization-agent">CUSTOMIZE.md § GitHub Copilot Customization Agent</a> for details.</p>
-
-<hr />
-
-<p><strong>Common first steps:</strong></p>
-
-<ul>
-  <li>Change the theme color in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
-  <li>Add your social media links in <code class="language-plaintext highlighter-rouge">_data/socials.yml</code></li>
-  <li>Upload your profile picture to <code class="language-plaintext highlighter-rouge">assets/img/prof_pic.jpg</code></li>
-  <li>Write a short bio in <code class="language-plaintext highlighter-rouge">_pages/about.md</code></li>
-</ul>
-
-<p>Happy customizing! 🎉</p>
+</div>
 
   </article>
 
