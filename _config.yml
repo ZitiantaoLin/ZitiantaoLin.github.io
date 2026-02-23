@@ -356,3 +356,6 @@ jsonresume:
 
 remote_theme: alshedivat/al-folio
 
+include:
+  - _pages
+
