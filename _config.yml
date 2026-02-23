@@ -2,26 +2,30 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Zitiantao Lin # 如果为空，将使用全名
+title: "Zitiantao Lin"
 first_name: Zitiantao
-middle_name: 
+middle_name:
 last_name: Lin
+
 contact_note: >
-  The best way to reach me is via email at lin.zi@northeastern.edu. 
-description: > 
-  Graduate Research Assistant at CRAFT Lab, Northeastern University. 
+  The best way to reach me is via email at lin.zi@northeastern.edu.
+
+description: >
+  Graduate Research Assistant at CRAFT Lab, Northeastern University.
   First author of 'RaycastGrasp', awarded Best Paper at ICIR 2025.
+
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Robotics, Computer Vision, Machine Learning, HCI, Northeastern University
-lang: en 
-icon: 🤖 
 
-url: https://ZitiantaoLin.github.io 
-baseurl: "" # 关键：必须为空字符串，否则 CSS/JS 路径会报错
-last_updated: true 
-back_to_top: true 
+keywords: Robotics, Computer Vision, Machine Learning, HCI, Northeastern University
+lang: en
+icon: "🤖"
+
+url: https://zitiantaolin.github.io
+baseurl: ""
+last_updated: true
+back_to_top: true
 
 # -----------------------------------------------------------------------------
 # Layout & Search
