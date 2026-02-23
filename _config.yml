@@ -87,11 +87,11 @@ scholar:
 # Optional Features (推荐开启的功能)
 # -----------------------------------------------------------------------------
 
-enable_google_analytics: false 
+enable_google_analytics: false
 enable_math: true # 开启以支持 LaTeX 公式渲染
 enable_darkmode: true # 支持暗黑模式切换
 enable_navbar_social: true # 在导航栏右上角显示社交图标
-enable_project_categories: true 
+enable_project_categories: true
 enable_medium_zoom: true # 允许点击图片放大
 enable_progressbar: true # 页面顶部显示阅读进度条
 
