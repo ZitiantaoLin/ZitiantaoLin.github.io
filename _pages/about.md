@@ -15,7 +15,7 @@ nav: false
     <!-- Image Carousel -->
     <div style="position:relative; width:280px; height:280px; overflow:hidden; border-radius:16px;">
       <img id="carousel-img"
-           src="/assets/img/profile1.jpg"
+           src="/assets/img/ewfe(1).jpg"
            style="width:100%; height:100%; object-fit:cover; display:block;" />
 
       <button type="button" onclick="prevImg()"
@@ -64,7 +64,7 @@ nav: false
         </p>
 
         <p style="margin:6px 0;">
-          🔗 <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank">LinkedIn</a>
+          🔗 <a href="[https://www.linkedin.com/in/zitiantao-lin/]" target="_blank">LinkedIn</a>
         </p>
 
         <p style="margin:6px 0;">
