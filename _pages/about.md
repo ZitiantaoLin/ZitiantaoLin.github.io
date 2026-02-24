@@ -15,7 +15,7 @@ nav: false
     <!-- Image Carousel -->
     <div style="position:relative; width:280px; height:280px; overflow:hidden; border-radius:16px;">
       <img id="carousel-img"
-           src="/assets/img/ewfe(1).jpg"
+           src="/assets/img/profile1.jpg"
            style="width:100%; height:100%; object-fit:cover; display:block;" />
 
       <button type="button" onclick="prevImg()"
@@ -68,7 +68,7 @@ nav: false
         </p>
 
         <p style="margin:6px 0;">
-          🎓 <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+          🎓 <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&authuser=2&hl=zh-CN&user=IqmXvv8AAAAJ&authuser=2" target="_blank">Google Scholar</a>
         </p>
 
       </div>
@@ -109,8 +109,8 @@ nav: false
 
 <script>
   const imgs = [
-    "/assets/img/profile1.jpg",
-    "/assets/img/profile2.jpg"
+    "/assets/img/ewfe(1).jpg",
+    "/assets/img/PhD2.jpg"
   ];
 
   let idx = 0;
