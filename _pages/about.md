@@ -126,18 +126,26 @@ nav: false
       <!-- Pub Item 1 -->
       <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
         <div style="flex:1; min-width:280px;">
-          <div style="font-weight:700; font-size:18px; line-height:1.25;">[Paper Title 1]</div>
-          <div style="margin-top:6px; opacity:0.9;">[Authors]</div>
-          <div style="margin-top:6px; opacity:0.75; font-style:italic;">[Venue / Status, Year]</div>
+          <div style="font-weight:700; font-size:18px; line-height:1.25;">
+            BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities
+          </div>
+          
+          <div style="margin-top:8px; opacity:0.9;">
+            Yu Qi, Haibo Zhao, Ziyu Guo, Siyuan Ma, Ziyan Chen, Yaokun Han, Renrui Zhang, <strong>Zitiantao Lin</strong>, Shiji Xin, Yijian Huang, Kai Cheng, Peiheng Wang, Jiazheng Liu, Jiayi Zhang, Yizhe Zhu, Wenqing Wang, Yiran Qin, Xupeng Zhu, Haojie Huang, Lawson L.S. Wong
+          </div>
+          
+          <div style="margin-top:6px; opacity:0.75; font-style:italic;">
+            Under Review, 2026
+          </div>
 
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="[PROJECT_URL_1]" target="_blank"
+            <a href="https://bear-official66.github.io/" target="_blank"
                style="display:inline-block; padding:6px 12px; border-radius:8px;
                       background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
                       text-decoration:none;">
               Project
             </a>
-            <a href="[PDF_URL_1]" target="_blank"
+            <a href="https://arxiv.org/pdf/2510.08759" target="_blank"
                style="display:inline-block; padding:6px 12px; border-radius:8px;
                       background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
                       text-decoration:none;">
@@ -147,9 +155,9 @@ nav: false
         </div>
 
         <div style="width:240px; flex:0 0 240px;">
-          <a href="[PROJECT_URL_1]" target="_blank" style="text-decoration:none;">
-            <img src="/assets/img/pubs/paper1.gif"
-                 alt="paper thumbnail"
+          <a href="https://bear-official66.github.io/" target="_blank" style="text-decoration:none;">
+            <img src="/assets/img/pubs/bear_preview.png" 
+                 alt="BEAR Project Preview"
                  style="width:240px; height:150px; object-fit:cover; border-radius:10px;
                         border:1px solid rgba(0,0,0,0.18);" />
           </a>
