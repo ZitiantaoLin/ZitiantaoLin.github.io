@@ -134,7 +134,7 @@ nav: false
           </div>
           
           <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-            Research Project, Northeastern University, 2025 – Present
+            Under Review, 2026
           </div>
 
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
@@ -211,7 +211,7 @@ nav: false
           </div>
           
           <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-            Research Project, Northeastern University, 2025
+            Under Review, 2025
           </div>
 
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
