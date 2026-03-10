@@ -152,7 +152,7 @@ nav: false
 
         <div style="width:240px; flex:0 0 240px;">
           <img src="/assets/img/pubs/ggctrans_preview.png" 
-               alt="GGC-Trans Architecture"
+               alt=""
                style="width:240px; height:150px; object-fit:cover; border-radius:10px;
                       border:1px solid rgba(0,0,0,0.18);" />
         </div>
@@ -191,7 +191,7 @@ nav: false
 
         <div style="width:240px; flex:0 0 240px;">
           <a href="https://bear-official66.github.io/" target="_blank" style="text-decoration:none;">
-            <img src="/assets/img/pubs/bear_preview.png" 
+            <img src="/assets/img/pubs/BEAR.png" 
                  alt="BEAR Project Preview"
                  style="width:240px; height:150px; object-fit:cover; border-radius:10px;
                         border:1px solid rgba(0,0,0,0.18);" />
