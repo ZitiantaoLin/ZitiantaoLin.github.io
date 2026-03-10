@@ -15,7 +15,7 @@ nav: false
     <!-- Image Carousel -->
     <div style="position:relative; width:280px; height:280px; overflow:hidden; border-radius:16px;">
       <img id="carousel-img"
-           src="/assets/img/profile1.jpg"
+           src="/assets/img/PhD1.jpg"
            style="width:100%; height:100%; object-fit:cover; display:block;" />
 
       <button type="button" onclick="prevImg()"
