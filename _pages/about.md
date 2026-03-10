@@ -150,13 +150,7 @@ nav: false
           </div>
         </div>
 
-        <div style="width:240px; flex:0 0 240px;">
-          <img src="/assets/img/pubs/ggctrans_preview.png" 
-               alt=""
-               style="width:240px; height:150px; object-fit:cover; border-radius:10px;
-                      border:1px solid rgba(0,0,0,0.18);" />
-        </div>
-      </div>
+        
 
       <!-- Pub Item 1 -->
       <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
@@ -219,13 +213,13 @@ nav: false
                style="display:inline-block; padding:6px 12px; border-radius:8px;
                       background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
                       text-decoration:none;">
-              Demo Video
+              PDF
             </a>
           </div>
         </div>
 
         <div style="width:240px; flex:0 0 240px;">
-          <img src="/assets/img/pubs/gazecastgrasp_preview.png" 
+          <img src="/assets/img/motivation.png" 
                alt="GazeCastGrasp System Interface"
                style="width:240px; height:150px; object-fit:cover; border-radius:10px;
                       border:1px solid rgba(0,0,0,0.18);" />
@@ -257,7 +251,7 @@ nav: false
                style="display:inline-block; padding:6px 12px; border-radius:8px;
                       background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
                       text-decoration:none;">
-              Project / Code
+              Project
             </a>
             <a href="https://arxiv.org/pdf/2510.22113" target="_blank"
                style="display:inline-block; padding:6px 12px; border-radius:8px;
