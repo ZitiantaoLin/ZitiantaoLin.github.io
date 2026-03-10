@@ -269,18 +269,8 @@ nav: false
         </div>
 
         <div style="width:240px; flex:0 0 240px;">
-          <a href="https://github.com/ZitiantaoLin/RaycastGrasp-Eye-Gaze-Interaction-with-Wearable-Devices-for-Robotic-Manipulation" target="_blank" style="text-decoration:none;">
+          <a href="https://arxiv.org/pdf/2510.22113" target="_blank" style="text-decoration:none;">
             <img src="/assets/img/pipelineICIR.png" 
-                 alt="RaycastGrasp System Demo"
-                 style="width:240px; height:150px; object-fit:cover; border-radius:10px;
-                        border:1px solid rgba(0,0,0,0.18);" />
-          </a>
-        </div>
-      </div>
-
-        <div style="width:240px; flex:0 0 240px;">
-          <a href="https://arxiv.org/abs/2510.22113" target="_blank" style="text-decoration:none;">
-            <img src="/assets/img/pubs/paper3.gif" 
                  alt="RaycastGrasp System Demo"
                  style="width:240px; height:150px; object-fit:cover; border-radius:10px;
                         border:1px solid rgba(0,0,0,0.18);" />
