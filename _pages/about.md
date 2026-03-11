@@ -194,37 +194,44 @@ nav: false
       </div>
 
       <!-- Pub Item 2 -->
-      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
-        <div style="flex:1; min-width:280px;">
-          <div style="font-weight:700; font-size:18px; line-height:1.25;">
-            GazeCastGrasp: MR-Enabled Eye-Gaze Interaction for Assistive Robotic Manipulation
-          </div>
-          
-          <div style="margin-top:8px; opacity:0.9;">
-            <strong>Zitiantao Lin*</strong>, Yongpeng Sang*, Xiao Hu, Yang Ye†
-          </div>
-          
-          <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-            Under Review, 2025
-          </div>
+<div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
+  <div style="flex:1; min-width:280px;">
+    
+    <div style="font-weight:700; font-size:18px; line-height:1.25;">
+      GazeCastGrasp: MR-Enabled Eye-Gaze Interaction for Assistive Robotic Manipulation
+    </div>
 
-          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="#" target="_blank"
-               style="display:inline-block; padding:6px 12px; border-radius:8px;
-                      background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
-                      text-decoration:none;">
-              PDF
-            </a>
-          </div>
-        </div>
+    <div style="margin-top:8px; opacity:0.9;">
+      <strong>Zitiantao Lin*</strong>, Yongpeng Sang*, Xiao Hu, Yang Ye†
+    </div>
 
-        <div style="width:240px; flex:0 0 240px;">
-          <img src="/assets/img/motivation.png" 
-               alt="GazeCastGrasp System Interface"
-               style="width:240px; height:150px; object-fit:cover; border-radius:10px;
-                      border:1px solid rgba(0,0,0,0.18);" />
-        </div>
-      </div>
+    <div style="margin-top:6px; opacity:0.75; font-style:italic;">
+      Under Review, 2025
+    </div>
+
+    <!-- PDF Button -->
+    <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="/assets/pdf/GazeCastGrasp.pdf"
+         target="_blank"
+         style="display:inline-block; padding:6px 12px; border-radius:8px;
+                background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
+                text-decoration:none;">
+        PDF
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Clickable Image -->
+  <div style="width:240px; flex:0 0 240px;">
+    <a href="/assets/pdf/GazeCastGrasp.pdf" target="_blank">
+      <img src="/assets/img/motivation.png"
+           alt="GazeCastGrasp System Interface"
+           style="width:240px; height:150px; object-fit:cover; border-radius:10px;
+                  border:1px solid rgba(0,0,0,0.18);" />
+    </a>
+  </div>
+</div>
 
       <!-- Pub Item 3 -->
       <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
