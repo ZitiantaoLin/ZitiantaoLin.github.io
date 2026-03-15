@@ -122,11 +122,7 @@ nav: false
     Northeastern University (Instructor: Prof. Handan Liu).
   </p>
 
-  <p>
-    <strong>2026</strong> – Our paper 
-    <em>BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities</em> 
-    is currently under review.
-  </p>
+
 
   <p>
     <strong>Feb 2025</strong> – Joined the 
