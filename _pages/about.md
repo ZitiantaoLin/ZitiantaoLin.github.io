@@ -187,7 +187,7 @@ nav: false
           </div>
           
           <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-            Under Review, 2026
+            ICML, 2026
           </div>
 
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
