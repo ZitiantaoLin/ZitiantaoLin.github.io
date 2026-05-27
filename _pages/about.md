@@ -229,7 +229,7 @@ nav: false
     </div>
 
     <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-      Under Review, 2025
+      2025
     </div>
 
     <!-- PDF Button -->
