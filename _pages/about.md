@@ -311,7 +311,7 @@ nav: false
 <script>
   const imgs = [
     "/assets/img/PhD1.jpg",
-    "/assets/img/PhD2.jpg"
+    "/assets/img/PhD1.jpg"
   ];
 
   let idx = 0;
