@@ -1,224 +1,354 @@
-元数据
-layout
-about
-title
-about
-permalink
-/
-subtitle
-M.S. in Information Systems · Northeastern University
-profile
-false
-nav
-false
-<div style="display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap;"> <!-- ================= LEFT SIDEBAR ================= --> <aside style="width:280px;">
-<img src="/assets/img/PhD1.jpg"
-     alt="Portrait of Zitiantao Lin"
-     style="width:280px; height:280px; object-fit:cover; display:block; border-radius:16px;" />
+---
+layout: about
+title: about
+permalink: /
+subtitle: Master of Science in Information Systems · Northeastern University
+profile: false
+nav: false
+---
 
-<div style="margin-top:28px; font-size:15px; line-height:1.9;">
-  <p style="font-weight:600; font-size:18px; margin:0 0 4px 0;">
-    Zitiantao Lin
-  </p>
+<div style="display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap;">
 
-  <p style="margin:0; color:#666;">
-    M.S. Student &amp; Graduate Research Assistant
-  </p>
+  <!-- ================= LEFT SIDEBAR ================= -->
+  <div style="width:280px;">
 
-  <div style="margin-top:18px;">
-    <p style="margin:6px 0;">📍 Boston, Massachusetts</p>
-    <p style="margin:6px 0;">🏛 Northeastern University</p>
-    <p style="margin:6px 0;">
-      ✉ <a href="mailto:lin.ziti@northeastern.edu">lin.ziti@northeastern.edu</a>
-    </p>
-    <p style="margin:6px 0;">
-      🔗 <a href="https://www.linkedin.com/in/zitiantao-lin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
-    <p style="margin:6px 0;">
-      🎓 <a href="https://scholar.google.com/citations?user=IqmXvv8AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-    </p>
-    <p style="margin:6px 0;">
-      💻 <a href="https://github.com/ZitiantaoLin" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </p>
-  </div>
-</div>
-</aside> <!-- ================= RIGHT CONTENT ================= --> <main style="flex:1; min-width:280px;">
-<!-- ===== Introduction ===== -->
-<h1 style="margin-top:0;">About Me</h1>
+    <!-- Image Carousel -->
+    <div style="position:relative; width:280px; height:280px; overflow:hidden; border-radius:16px;">
+      <img id="carousel-img"
+           src="/assets/img/PhD1.jpg"
+           style="width:100%; height:100%; object-fit:cover; display:block;" />
 
-<p>
-  I am an M.S. student in Information Systems at Northeastern University and a Graduate Research Assistant in the CRAFT Lab, advised by Prof. Yang (Gilbert) Ye. My research lies at the intersection of Human–Computer Interaction, Human–Robot Interaction, embodied AI, and computer vision.
-</p>
+      <button type="button" onclick="prevImg()"
+              style="position:absolute; left:12px; top:50%; transform:translateY(-50%);
+                     border:none; width:36px; height:36px; border-radius:50%;
+                     background:rgba(0,0,0,0.45); color:white; font-size:18px; cursor:pointer;">
+        ‹
+      </button>
 
-<p>
-  I study how interactive systems can infer human intent from implicit and multimodal signals—especially eye gaze—and translate that intent into accessible, context-aware assistance. My work combines wearable eye tracking, mixed reality, cross-view visual grounding, robot perception, and end-to-end manipulation with collaborative robots. A central goal is to reduce the physical and cognitive effort required to communicate intent to assistive systems while preserving user agency and trust.
-</p>
+      <button type="button" onclick="nextImg()"
+              style="position:absolute; right:12px; top:50%; transform:translateY(-50%);
+                     border:none; width:36px; height:36px; border-radius:50%;
+                     background:rgba(0,0,0,0.45); color:white; font-size:18px; cursor:pointer;">
+        ›
+      </button>
+    </div>
 
-<p>
-  I am also interested in human-centered AI systems beyond robotic manipulation, including AI companions and assistive agents. I aim to examine when such systems can support self-efficacy and reduce social isolation, and how their design shapes trust, autonomy, dependence, and willingness to seek human help.
-</p>
+    <!-- Dots -->
+    <div style="display:flex; justify-content:center; gap:10px; margin-top:12px;">
+      <span id="dot-0" onclick="goImg(0)" style="width:8px; height:8px; border-radius:50%; background:#666; cursor:pointer;"></span>
+      <span id="dot-1" onclick="goImg(1)" style="width:8px; height:8px; border-radius:50%; background:#bbb; cursor:pointer;"></span>
+    </div>
 
-<p style="margin-top:12px;">
-  <a href="mailto:lin.ziti@northeastern.edu">Email</a>
-  &nbsp;/&nbsp;
-  <a href="https://www.linkedin.com/in/zitiantao-lin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  &nbsp;/&nbsp;
-  <a href="https://scholar.google.com/citations?user=IqmXvv8AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-  &nbsp;/&nbsp;
-  <a href="https://github.com/ZitiantaoLin" target="_blank" rel="noopener noreferrer">GitHub</a>
-</p>
+    <!-- Profile Info -->
+    <div style="margin-top:28px; font-size:15px; line-height:1.9;">
+      <p style="font-weight:600; font-size:18px; margin-bottom:4px;">
+        Zitiantao Lin
+      </p>
 
-<!-- ===== Research Interests ===== -->
-<h2 style="margin-top:30px;">Research Interests</h2>
-<hr style="margin:10px 0 14px 0; opacity:0.25;">
-<ul>
-  <li><strong>Human–Robot Interaction and Assistive Robotics:</strong> Designing low-effort, accessible interaction methods for robotic assistance and embodied agents.</li>
-  <li><strong>Eye Gaze and Multimodal Intent Modeling:</strong> Using gaze dynamics, egocentric sensing, and cross-view visual grounding to infer human goals in situated tasks.</li>
-  <li><strong>Embodied AI and Multimodal Evaluation:</strong> Evaluating perception, spatial reasoning, trajectory understanding, planning, and physical plausibility in multimodal models.</li>
-  <li><strong>Human-Centered AI and Digital Well-Being:</strong> Studying how assistive agents and AI companions affect trust, autonomy, self-efficacy, dependence, and help-seeking behavior.</li>
-</ul>
+      <p style="margin:0; color:#666;">
+        M.S. Student & Graduate Research Assistant
+      </p>
 
-<!-- ===== Current Research ===== -->
-<h2 style="margin-top:30px;">Current Research</h2>
-<hr style="margin:10px 0 14px 0; opacity:0.25;">
+      <div style="margin-top:18px;">
 
-<div style="display:flex; flex-direction:column; gap:18px;">
+        <p style="margin:6px 0;">
+          📍 Boston, Massachusetts
+        </p>
 
-  <div>
-    <div style="font-weight:700; font-size:17px;">Cross-View Gaze and Intention Modeling</div>
-    <p style="margin:7px 0 0 0;">
-      Developing methods that map temporally evolving gaze from a wearable first-person camera to task-relevant regions in an external robot view. The work models fixation, switching, and deliberation patterns to support intention-aware manipulation without relying on depth sensing or task-specific fine-tuning.
-    </p>
+        <p style="margin:6px 0;">
+          🏛 Northeastern University
+        </p>
+
+        <p style="margin:6px 0;">
+          ✉ <a href="mailto:lin.ziti@northeastern.edu">lin.ziti@northeastern.edu</a>
+        </p>
+
+        <p style="margin:6px 0;">
+          🔗 <a href="https://www.linkedin.com/in/zitiantao-lin/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p style="margin:6px 0;">
+          🎓 <a href="https://scholar.google.com/citations?user=IqmXvv8AAAAJ" target="_blank">Google Scholar</a>
+        </p>
+
+      </div>
+    </div>
+
   </div>
 
-  <div>
-    <div style="font-weight:700; font-size:17px;">MR-Enabled Gaze Interaction for Assistive Manipulation</div>
-    <p style="margin:7px 0 0 0;">
-      Building and evaluating gaze-driven interaction systems that integrate mixed-reality eye tracking, object perception, and Franka robot execution. The evaluation examines task success, completion time, target alignment, usability, workload, user experience, and trust.
-    </p>
-    <p style="margin:8px 0 0 0;">
-      <a href="/assets/pdf/GazeCastGrasp.pdf" target="_blank" rel="noopener noreferrer">Manuscript PDF</a>
-    </p>
-  </div>
+  <!-- ================= RIGHT CONTENT ================= -->
+  <div style="flex:1; min-width:280px;">
 
-  <div>
-    <div style="font-weight:700; font-size:17px;">Embodied Multimodal Model Evaluation</div>
-    <p style="margin:7px 0 0 0;">
-      Contributing to benchmark construction, auditing, and model evaluation for embodied perception and reasoning. Current work also examines whether generated robot videos satisfy physical plausibility and instruction-alignment criteria.
+    <!-- ===== Intro / Contact ===== -->
+    <h1 style="margin-top:0;"></h1>
+
+    <p>
+      I am currently pursuing a Master of Science in Information Systems at Northeastern University, where I serve as a Graduate Research Assistant in the CRAFT Lab under the supervision of Prof. Gilbert Yang Ye.
+
+      My research lies at the intersection of Human–Computer Interaction (HCI), Human–Robot Interaction (HRI), embodied AI, and Computer Vision. I study how interactive systems can infer human intent from implicit and multimodal signals—especially eye gaze—and translate that intent into accessible, context-aware assistance.
+
+      My current work combines wearable eye tracking, mixed reality, cross-view visual grounding, robot perception, and end-to-end robotic manipulation. I am also interested in how assistive agents and AI companions affect user trust, autonomy, self-efficacy, dependence, and willingness to seek human help. My work on MR-enabled eye-gaze interaction, RaycastGrasp, received the Best Paper Award at ICIR 2025.
     </p>
-  </div>
 
-</div>
+    <p style="margin-top:12px;">
+      <a href="mailto:lin.ziti@northeastern.edu">Email</a>
+      &nbsp;/&nbsp;
+      <a href="https://www.linkedin.com/in/zitiantao-lin/" target="_blank">LinkedIn</a>
+      &nbsp;/&nbsp;
+      <a href="https://scholar.google.com/citations?user=IqmXvv8AAAAJ" target="_blank">Google Scholar</a>
+      &nbsp;/&nbsp;
+      <a href="https://github.com/ZitiantaoLin" target="_blank">GitHub</a>
+    </p>
 
-<!-- ===== News ===== -->
-<h2 style="margin-top:30px;">News</h2>
+    <!-- ===== Research Interests ===== -->
+    <h2 style="margin-top:28px;">Research Interests</h2>
+    <hr style="margin:10px 0 14px 0; opacity:0.25;">
+    <ul>
+      <li><strong>Human-Robot Interaction & Assistive Robotics:</strong> Designing low-effort and accessible interaction methods for robotic assistance and embodied agents.</li>
+      <li><strong>Eye-Gaze & Multimodal Intent Modeling:</strong> Using gaze dynamics, egocentric sensing, and cross-view visual grounding to infer human goals in situated tasks.</li>
+      <li><strong>Embodied AI & Multimodal Evaluation:</strong> Evaluating perception, spatial reasoning, trajectory understanding, planning, and physical plausibility in multimodal models.</li>
+      <li><strong>Human-Centered AI & Digital Well-Being:</strong> Studying how assistive agents and AI companions affect trust, autonomy, self-efficacy, dependence, and help-seeking behavior.</li>
+    </ul>
+
+    <!-- ===== News ===== -->
+<h2 style="margin-top:28px;">News</h2>
 <hr style="margin:10px 0 14px 0; opacity:0.25;">
 
 <div style="line-height:1.8; font-size:15px;">
+
   <p>
-    <strong>2026</strong> – Our paper <em>BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities</em> was accepted to <strong>ICML 2026</strong>.
+    <strong>2026</strong> – Our paper 
+    <em>BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities</em> 
+    was accepted to <strong>ICML 2026</strong>.
   </p>
 
   <p>
-    <strong>Jan–Apr 2026</strong> – Served as a Teaching Assistant for <em>INFO 6105: Data Science Engineering Methods</em> at Northeastern University, instructed by Prof. Handan Liu.
+    <strong>Jan–Apr 2026</strong> – Served as a Teaching Assistant for 
+    <em>INFO 6105: Data Science Engineering Methods</em>, 
+    Northeastern University (Instructor: Prof. Handan Liu).
+  </p>
+
+
+
+  <p>
+    <strong>Feb 2025</strong> – Joined the 
+    <strong>CRAFT Lab</strong> at Northeastern University as a 
+    Graduate Research Assistant advised by 
+    Prof. Yang (Gilbert) Ye.
   </p>
 
   <p>
-    <strong>2025</strong> – <em>RaycastGrasp: Eye-Gaze Interaction with Wearable Devices for Robotic Manipulation</em> received the <strong>Best Paper Award</strong> at IEEE ICIR 2025.
+    <strong>2025</strong> – Our work 
+    <em>RaycastGrasp: Eye-Gaze Interaction with Wearable Devices for Robotic Manipulation</em> 
+    received the <strong>Best Paper Award</strong> at 
+    <strong>ICIR 2025</strong>.
   </p>
-
-  <p>
-    <strong>Feb 2025</strong> – Joined the CRAFT Lab at Northeastern University as a Graduate Research Assistant advised by Prof. Yang (Gilbert) Ye.
-  </p>
-</div>
-
-<!-- ===== Selected Publications ===== -->
-<h2 style="margin-top:30px;">Selected Publications</h2>
-<hr style="margin:10px 0 14px 0; opacity:0.25;">
-
-<div style="display:flex; flex-direction:column; gap:30px;">
-
-  <!-- Publication 1: BEAR -->
-  <article style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
-    <div style="flex:1; min-width:280px;">
-      <div style="font-weight:700; font-size:18px; line-height:1.3;">
-        BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities
-      </div>
-
-      <div style="margin-top:8px; opacity:0.9;">
-        Yu Qi, Haibo Zhao, Ziyu Guo, Siyuan Ma, Ziyan Chen, Yaokun Han, Renrui Zhang, <strong>Zitiantao Lin</strong>, Shiji Xin, Yijian Huang, Kai Cheng, Peiheng Wang, Jiazheng Liu, Jiayi Zhang, Yizhe Zhu, Wenqing Wang, Yiran Qin, Xupeng Zhu, Haojie Huang, Lawson L. S. Wong
-      </div>
-
-      <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-        International Conference on Machine Learning (ICML), 2026
-      </div>
-
-      <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="https://bear-official66.github.io/" target="_blank" rel="noopener noreferrer"
-           style="display:inline-block; padding:6px 12px; border-radius:8px; border:1px solid currentColor; text-decoration:none;">
-          Project
-        </a>
-        <a href="https://arxiv.org/abs/2510.08759" target="_blank" rel="noopener noreferrer"
-           style="display:inline-block; padding:6px 12px; border-radius:8px; border:1px solid currentColor; text-decoration:none;">
-          Paper
-        </a>
-      </div>
-    </div>
-
-    <div style="width:240px; flex:0 0 240px;">
-      <a href="https://bear-official66.github.io/" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/img/BEAR.png"
-             alt="Overview of the BEAR benchmark"
-             style="width:240px; height:150px; object-fit:cover; border-radius:10px; border:1px solid rgba(0,0,0,0.18);" />
-      </a>
-    </div>
-  </article>
-
-  <!-- Publication 2: RaycastGrasp -->
-  <article style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
-    <div style="flex:1; min-width:280px;">
-      <div style="font-weight:700; font-size:18px; line-height:1.3;">
-        RaycastGrasp: Eye-Gaze Interaction with Wearable Devices for Robotic Manipulation
-      </div>
-
-      <div style="margin-top:8px;">
-        <span style="background:rgba(255,215,0,0.2); color:#9a7000; padding:3px 8px; border-radius:6px; font-size:13px; font-weight:700; border:1px solid rgba(154,112,0,0.35);">
-          🏆 Best Paper Award
-        </span>
-      </div>
-
-      <div style="margin-top:8px; opacity:0.9;">
-        <strong>Zitiantao Lin*</strong>, Yongpeng Sang*, Yang Ye
-      </div>
-
-      <div style="margin-top:6px; opacity:0.75; font-style:italic;">
-        IEEE 4th International Conference on Intelligent Reality (ICIR), 2025
-      </div>
-
-      <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="https://github.com/ZitiantaoLin/RaycastGrasp-Eye-Gaze-Interaction-with-Wearable-Devices-for-Robotic-Manipulation" target="_blank" rel="noopener noreferrer"
-           style="display:inline-block; padding:6px 12px; border-radius:8px; border:1px solid currentColor; text-decoration:none;">
-          Project
-        </a>
-        <a href="https://arxiv.org/abs/2510.22113" target="_blank" rel="noopener noreferrer"
-           style="display:inline-block; padding:6px 12px; border-radius:8px; border:1px solid currentColor; text-decoration:none;">
-          Paper
-        </a>
-      </div>
-    </div>
-
-    <div style="width:240px; flex:0 0 240px;">
-      <a href="https://arxiv.org/abs/2510.22113" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/img/pipelineICIR.png"
-             alt="RaycastGrasp system pipeline"
-             style="width:240px; height:150px; object-fit:cover; border-radius:10px; border:1px solid rgba(0,0,0,0.18);" />
-      </a>
-    </div>
-  </article>
 
 </div>
 
-<p style="margin-top:18px; font-size:13px; opacity:0.75;">
-  * Equal contribution.
-</p>
-</main> </div>
+    <!-- ===== Selected Research & Publications ===== -->
+    <h2 style="margin-top:28px;">Selected Research & Publications</h2>
+    <hr style="margin:10px 0 14px 0; opacity:0.25;">
+
+    <div style="display:flex; flex-direction:column; gap:22px;">
+
+      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; margin-bottom: 30px;">
+        <div style="flex:1; min-width:280px;">
+          <div style="font-weight:700; font-size:18px; line-height:1.25;">
+            Cross-View Gaze and Intention Modeling for Assistive Robotic Manipulation
+          </div>
+          
+          <div style="margin-top:8px; opacity:0.9;">
+            <strong>Zitiantao Lin</strong>, Yang Ye
+          </div>
+          
+          <div style="margin-top:6px; opacity:0.75; font-style:italic;">
+            Ongoing Research, 2026
+          </div>
+
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:6px; 
+                         background:rgba(0,123,255,0.1); color:#007bff; font-size:13px; font-weight:600; border:1px solid rgba(0,123,255,0.2);">
+              First-Author Project
+            </span>
+          </div>
+          
+          <div style="margin-top:12px; font-size:14.5px; line-height:1.5; opacity:0.85;">
+            Developing methods that map temporally evolving gaze from a wearable first-person camera to task-relevant regions in an external robot view. 
+            The work models fixation, switching, and deliberation patterns to support intention-aware manipulation without relying on depth sensing or task-specific fine-tuning.
+          </div>
+        </div>
+      </div>
+
+        
+
+      <!-- Pub Item 1 -->
+      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1; min-width:280px;">
+          <div style="font-weight:700; font-size:18px; line-height:1.25;">
+            BEAR: Benchmarking and Enhancing Multimodal Language Models for Atomic Embodied Capabilities
+          </div>
+          
+          <div style="margin-top:8px; opacity:0.9;">
+            Yu Qi, Haibo Zhao, Ziyu Guo, Siyuan Ma, Ziyan Chen, Yaokun Han, Renrui Zhang, <strong>Zitiantao Lin</strong>, Shiji Xin, Yijian Huang, Kai Cheng, Peiheng Wang, Jiazheng Liu, Jiayi Zhang, Yizhe Zhu, Wenqing Wang, Yiran Qin, Xupeng Zhu, Haojie Huang, Lawson L.S. Wong
+          </div>
+          
+          <div style="margin-top:6px; opacity:0.75; font-style:italic;">
+            International Conference on Machine Learning (ICML), 2026
+          </div>
+
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="https://bear-official66.github.io/" target="_blank"
+               style="display:inline-block; padding:6px 12px; border-radius:8px;
+                      background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
+                      text-decoration:none;">
+              Project
+            </a>
+            <a href="https://arxiv.org/pdf/2510.08759" target="_blank"
+               style="display:inline-block; padding:6px 12px; border-radius:8px;
+                      background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
+                      text-decoration:none;">
+              PDF
+            </a>
+          </div>
+        </div>
+
+        <div style="width:240px; flex:0 0 240px;">
+          <a href="https://bear-official66.github.io/" target="_blank" style="text-decoration:none;">
+            <img src="/assets/img/BEAR.png" 
+                 alt="BEAR Project Preview"
+                 style="width:240px; height:150px; object-fit:cover; border-radius:10px;
+                        border:1px solid rgba(0,0,0,0.18);" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Pub Item 2 -->
+<div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
+  <div style="flex:1; min-width:280px;">
+    
+    <div style="font-weight:700; font-size:18px; line-height:1.25;">
+      GazeCastGrasp: MR-Enabled Eye-Gaze Interaction for Assistive Robotic Manipulation
+    </div>
+
+    <div style="margin-top:8px; opacity:0.9;">
+      <strong>Zitiantao Lin*</strong>, Yongpeng Sang*, Xiao Hu, Yang Ye†
+    </div>
+
+    <div style="margin-top:6px; opacity:0.75; font-style:italic;">
+      Manuscript, 2025
+    </div>
+
+    <!-- PDF Button -->
+    <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="/assets/pdf/GazeCastGrasp.pdf"
+         target="_blank"
+         style="display:inline-block; padding:6px 12px; border-radius:8px;
+                background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
+                text-decoration:none;">
+        PDF
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Clickable Image -->
+  <div style="width:240px; flex:0 0 240px;">
+    <a href="/assets/pdf/GazeCastGrasp.pdf" target="_blank">
+      <img src="/assets/img/motivation.png"
+           alt="GazeCastGrasp System Interface"
+           style="width:240px; height:150px; object-fit:cover; border-radius:10px;
+                  border:1px solid rgba(0,0,0,0.18);" />
+    </a>
+  </div>
+</div>
+
+      <!-- Pub Item 3 -->
+      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
+        <div style="flex:1; min-width:280px;">
+          <div style="font-weight:700; font-size:18px; line-height:1.25;">
+            RaycastGrasp: Eye-Gaze Interaction with Wearable Devices for Robotic Manipulation
+          </div>
+          
+          <div style="margin-top:8px;">
+            <span style="background: rgba(255, 215, 0, 0.2); color: #b8860b; padding: 3px 8px; border-radius: 6px; font-size: 13px; font-weight: 700; border: 1px solid rgba(184, 134, 11, 0.3);">
+              🏆 Best Paper Award
+            </span>
+          </div>
+
+          <div style="margin-top:8px; opacity:0.9;">
+            <strong>Zitiantao Lin*</strong>, Yongpeng Sang*, Yang Ye
+          </div>
+          <div style="margin-top:6px; opacity:0.75; font-style:italic;">
+            IEEE 4th International Conference on Intelligent Reality (ICIR), 2025
+          </div>
+
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="https://github.com/ZitiantaoLin/RaycastGrasp-Eye-Gaze-Interaction-with-Wearable-Devices-for-Robotic-Manipulation" target="_blank"
+               style="display:inline-block; padding:6px 12px; border-radius:8px;
+                      background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
+                      text-decoration:none;">
+              Project
+            </a>
+            <a href="https://arxiv.org/pdf/2510.22113" target="_blank"
+               style="display:inline-block; padding:6px 12px; border-radius:8px;
+                      background:rgba(255,255,255,0.15); border:1px solid rgba(0,0,0,0.25);
+                      text-decoration:none;">
+              PDF
+            </a>
+          </div>
+        </div>
+
+        <div style="width:240px; flex:0 0 240px;">
+          <a href="https://arxiv.org/pdf/2510.22113" target="_blank" style="text-decoration:none;">
+            <img src="/assets/img/pipelineICIR.png" 
+                 alt="RaycastGrasp System Demo"
+                 style="width:240px; height:150px; object-fit:cover; border-radius:10px;
+                        border:1px solid rgba(0,0,0,0.18);" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const imgs = [
+    "/assets/img/PhD1.jpg",
+    "/assets/img/PhD1.jpg"
+  ];
+
+  let idx = 0;
+
+  function render() {
+    const el = document.getElementById("carousel-img");
+    if (!el) return;
+
+    el.src = imgs[idx];
+
+    for (let i = 0; i < imgs.length; i++) {
+      const dot = document.getElementById("dot-" + i);
+      if (dot) dot.style.background = (i === idx) ? "#666" : "#bbb";
+    }
+  }
+
+  function prevImg() {
+    idx = (idx - 1 + imgs.length) % imgs.length;
+    render();
+  }
+
+  function nextImg() {
+    idx = (idx + 1) % imgs.length;
+    render();
+  }
+
+  function goImg(i) {
+    idx = i;
+    render();
+  }
+
+  render();
+</script>
